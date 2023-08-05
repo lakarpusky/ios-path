@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 01/Variables-Constants.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 01/Decimal-Numbers.playground">
    </FileRef>
    <FileRef
@@ -9,8 +12,5 @@
    </FileRef>
    <FileRef
       location = "group:Day 01/Strings.playground">
-   </FileRef>
-   <FileRef
-      location = "group:Day 01/Variables-and-Constants.playground">
    </FileRef>
 </Workspace>
