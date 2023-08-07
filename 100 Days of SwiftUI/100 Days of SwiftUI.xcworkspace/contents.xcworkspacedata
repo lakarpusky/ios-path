@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 02/Checkpoint 01.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 02/String-Interpolation.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 02/Booleans.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 01/Variables-Constants.playground">
    </FileRef>
    <FileRef
