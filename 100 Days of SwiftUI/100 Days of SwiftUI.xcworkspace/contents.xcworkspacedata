@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 03/Enums.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 03/Sets.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 03/Dictionaries.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 03/Arrays.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 02/Checkpoint 01.playground">
    </FileRef>
    <FileRef
