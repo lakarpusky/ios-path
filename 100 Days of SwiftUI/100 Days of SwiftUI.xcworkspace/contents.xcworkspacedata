@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 04/Checkpoint-02.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 04/Type-Annotations.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 03/Enums.playground">
    </FileRef>
    <FileRef
