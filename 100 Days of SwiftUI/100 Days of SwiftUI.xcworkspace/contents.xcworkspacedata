@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 05/Ternary-Conditional-Operator.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 05/If-Else.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 05/Switch.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 04/Checkpoint-02.playground">
    </FileRef>
    <FileRef
