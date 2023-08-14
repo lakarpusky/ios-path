@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 06/Checkpoint-03.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 06/Skip-Loops.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 06/While-Loop.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 06/For-Loop.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 05/Ternary-Conditional-Operator.playground">
    </FileRef>
    <FileRef
