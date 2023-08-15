@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 07/Function-Parameters.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 07/Function-Return-Value.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 07/Functions.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 06/Checkpoint-03.playground">
    </FileRef>
    <FileRef
