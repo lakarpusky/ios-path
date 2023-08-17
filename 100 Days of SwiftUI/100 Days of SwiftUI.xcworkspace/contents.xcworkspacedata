@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 08/Checkpoint-04.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 08/Functions-Error-Handle.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 08/Parameters-Default-Value.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 07/Function-Parameters.playground">
    </FileRef>
    <FileRef
