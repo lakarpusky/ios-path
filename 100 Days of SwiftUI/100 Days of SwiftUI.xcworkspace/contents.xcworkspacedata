@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 09/Checkpoint-05.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 09/Function-as-Parameter.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 09/Closure-Trailing-ShortandSyntax.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 09/Closures.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 08/Checkpoint-04.playground">
    </FileRef>
    <FileRef
