@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 10/Custom-Initializers.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 10/Property-Observers.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 10/Computed-Properties.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 10/Structs.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 09/Checkpoint-05.playground">
    </FileRef>
    <FileRef
