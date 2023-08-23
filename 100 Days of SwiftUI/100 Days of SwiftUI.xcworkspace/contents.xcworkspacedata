@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 11/Checkpoint-06.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 11/Struct-StaticProperties-Methods.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 11/Struct-Access-Control.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 10/Custom-Initializers.playground">
    </FileRef>
    <FileRef
