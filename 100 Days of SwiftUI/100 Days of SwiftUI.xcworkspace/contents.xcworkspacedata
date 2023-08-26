@@ -2,6 +2,27 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 12/Checkpoint-07.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 12/Class-Variables.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 12/Class-Deinitializer.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 12/Copying-Classes.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 12/Class-Initializers.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 12/Class-Inheritance.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 12/Classes.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 11/Checkpoint-06.playground">
    </FileRef>
    <FileRef
