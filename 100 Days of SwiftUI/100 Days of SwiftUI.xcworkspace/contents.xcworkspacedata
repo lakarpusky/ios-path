@@ -2,6 +2,21 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 13/Checkpoint-08.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 13/Using-Protocol-Extension.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 13/Extensions.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 13/Opaque-Return-Types.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Day 13/Protocols.playground">
+   </FileRef>
+   <FileRef
       location = "group:Day 12/Checkpoint-07.playground">
    </FileRef>
    <FileRef
