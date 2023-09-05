@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 16/WeSplit/WeSplit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Day 15/Swift-Review.playground">
    </FileRef>
    <FileRef
