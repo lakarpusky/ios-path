@@ -8,40 +8,76 @@
 import SwiftUI
 
 struct ContentView: View {
-    // .. property wrapper
-    // .. allows that value to be stored separately
     
-    @State private var tapCount = 0
+    @State private var checkAmount = 0.0
+    @State private var numberOfPeople = 2
+    @State private var tipPercentage = 20
     
-    // .. for single properties that are stored in one view
-    // .. recommends we add "private" access control
+    @FocusState private var amountIsFocused: Bool
     
-    @State private var name = ""
+    let tipPercentages = [10, 15, 20, 25, 0]
     
-    let students = ["Harry", "Hermione", "Ron"]
-    @State private var selectedStudent = "Harry"
+    var totalPerPerson: Double {
+        let peopleCount = Double(numberOfPeople + 2)
+        let tipSelection = Double(tipPercentage)
+        
+        let tipValue = checkAmount / 100 * tipSelection
+        let grandTotal = checkAmount + tipValue
+        let amountPerPerson = grandTotal / peopleCount
+        
+        return amountPerPerson
+    }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    // .. "$": mark the variable for "two-way binding"
-                    TextField("Enter your name", text: $name)
-                    Text("Your name is \(name)")
-                }
-                Section {
-                    Picker("Select your student", selection: $selectedStudent) {
-                        ForEach(students, id: \.self) {
-                            Text($0)
+                    TextField(
+                        "Amount",
+                        value: $checkAmount,
+                        format: .currency(
+                            code: Locale.current.currency?.identifier ?? "USD"
+                        )
+                    )
+                    .keyboardType(.decimalPad)
+                    .focused($amountIsFocused)
+                    
+                    Picker("Number of people", selection: $numberOfPeople) {
+                        ForEach(2 ..< 100) {
+                            Text("\($0) people")
                         }
                     }
                 }
-                Button("Tap Count: \(tapCount)") {
-                    self.tapCount += 1
+                
+                Section {
+                    Picker("Tip perecentage", selection: $tipPercentage) {
+                        ForEach(tipPercentages, id: \.self) {
+                            Text($0, format: .percent)
+                        }
+                    }.pickerStyle(.segmented)
+                } header: {
+                    Text("How much tip do you want to leave?")
+                }
+                
+                Section {
+                    Text(
+                        totalPerPerson,
+                        format: .currency(
+                            code: Locale.current.currency?.identifier ?? "USD"
+                        )
+                    )
                 }
             }
-            .navigationTitle("SwiftUI")
+            .navigationTitle("WeSplit")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        amountIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
