@@ -9,81 +9,98 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var showingAlert = false
+    @State private var showingStore = false
+    @State private var scoreTitle = ""
+    
+    @State private var countries = [
+        "Estonia",
+        "France",
+        "Germany",
+        "Ireland",
+        "Italy",
+        "Nigeria",
+        "Poland",
+        "Russia",
+        "Spain",
+        "UK",
+        "US"
+    ].shuffled()
+    
+    @State private var correctAnswer = Int.random(in: 0...2)
     
     var body: some View {
-//        ZStack {
-//            VStack(spacing: 0) {
-//                Color(red: 1, green: 0.8, blue: 0)
-//                Color.orange
-//            }
+        ZStack {
+            RadialGradient(
+                stops: [
+                    .init(color: Color(red: 0.1, green: 0.2, blue: 0.45), location: 0.3),
+                    .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3)
+                ],
+                center: .top,
+                startRadius: 200,
+                endRadius: 400
+            )
+            .ignoresSafeArea()
             
-//            LinearGradient(
-//                gradient: Gradient(colors: [.white, .black]),
-//                startPoint: .top,
-//                endPoint: .bottom
-//            )
+            VStack {
+                Text("Guess the Flag")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                VStack(spacing: 20) {
+                    VStack {
+                        Text("Tap the flag of:")
+                            .foregroundStyle(.secondary)
+                            .font(.subheadline.weight(.heavy))
+                        
+                        Text("\(countries[correctAnswer])")
+                            .font(.largeTitle.weight(.semibold))
+                    }
+                    
+                    ForEach(0..<3) { number in
+                        Button {
+                            flagTapped(number)
+                        } label: {
+                            Image(countries[number])
+                                .renderingMode(.original)
+                                .clipShape(Capsule())
+                                .shadow(radius: 5)
+                        }
+                    }
+                }
+                .frame(maxWidth: 320)
+                .padding(.vertical, 20)
+                .background(.regularMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                
+                Spacer()
+                Spacer()
+                
+                Text("Score: ???")
+                    .foregroundColor(.white)
+                    .font(.title.bold())
+                
+                Spacer()
+            }
+            .padding()
             
-//            LinearGradient(
-//                gradient: Gradient(stops: [
-//                    .init(color: .white, location: 0.45),
-//                    .init(color: .black, location: 0.55)
-//                ]),
-//                startPoint: .top,
-//                endPoint: .bottom
-//            )
-            
-//            RadialGradient(
-//                gradient: Gradient(colors: [.blue, .black]),
-//                center: .center,
-//                startRadius: 20,
-//                endRadius: 200
-//            )
-            
-//            AngularGradient(
-//                gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]),
-//                center: .center
-//            )
-//        }
-//        .ignoresSafeArea()
-        
-//        VStack {
-//            Button(
-//                "Delete selection",
-//                action: executeDelete
-//            )
-//            .buttonStyle(.borderedProminent)
-//            .tint(.mint)
-//
-//            Button {
-//                print("Button was tapped")
-//            } label: {
-//                Text("Tap me!")
-//                    .padding()
-//                    .foregroundColor(.white)
-//                    .background(.red)
-//            }
-//
-//            Button {
-//                print("Edit button was tapped")
-//            } label: {
-//                Image(systemName: "pencil").renderingMode(.original)
-//                Label("Edit", systemImage: "pencil")
-//            }
-//        }
-        
-        Button("Show Alert") {
-            showingAlert = true
-        }
-        .alert("Important message", isPresented: $showingAlert) {
-            Button("Delete", role: .destructive) {}
-            Button("Cancel", role: .cancel) {}
+        }.alert(scoreTitle, isPresented: $showingStore) {
+            Button("Continue", action: askQuestion)
         } message: {
-            Text("Please read this.")
+            Text("Your score is ???")
         }
     }
     
-    func executeDelete() {}
+    func flagTapped(_ number: Int) {
+        scoreTitle = number == correctAnswer ? "Correct" : "Wrong"
+        showingStore = true
+    }
+    
+    func askQuestion() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
