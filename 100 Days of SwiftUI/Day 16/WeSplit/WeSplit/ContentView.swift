@@ -70,6 +70,7 @@ struct ContentView: View {
                             code: Locale.current.currency?.identifier ?? "USD"
                         )
                     )
+                    .foregroundColor(tipPercentage == 0 ? .red : .primary)
                 } header: {
                     Text("Total amount for the check")
                 }
