@@ -64,6 +64,18 @@ struct GridStack<Content: View>: View {
     }
 }
 
+struct ProminentTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+            .padding()
+            .background(.yellow)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .bold()
+    }
+}
+
 extension View {
     func titleStyle() -> some View {
         modifier(Title())
@@ -71,6 +83,10 @@ extension View {
 
     func watermarked(with text: String) -> some View {
         modifier(Watermark(text: text))
+    }
+    
+    func bigTitle() -> some View {
+        modifier(ProminentTitle())
     }
 }
 
@@ -147,9 +163,13 @@ struct ContentView: View {
         }
         .padding()
         
-        GridStack(rows: 4, columns: 4) { row, col in
-            Image(systemName: "\(row * 4 + col).circle")
-            Text("R\(row) C\(col)")
+        VStack {
+            GridStack(rows: 4, columns: 4) { row, col in
+                Image(systemName: "\(row * 4 + col).circle")
+                Text("R\(row) C\(col)")
+            }
+            
+            Text("H1").bigTitle()
         }
     }
 }
