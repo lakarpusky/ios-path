@@ -19,11 +19,11 @@ struct ContentView: View {
     
     @State private var sleepAmount = 8.0
     @State private var wakeUp = defaultWakeTime
+    
     @State private var coffeeAmount = 1
     
-    @State private var alertTitle = ""
+    @State private var alertTitle = "Your ideal bedtime is:"
     @State private var alertMessage = ""
-    @State private var showingAlert = false
     
     func calculateBedtime() {
         do {
@@ -42,50 +42,55 @@ struct ContentView: View {
             
             let sleepTime = wakeUp - prediction.actualSleep
             
-            alertTitle = "Your ideal bedtime is..."
+            alertTitle = "Your ideal bedtime is:"
             alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
         } catch {
             alertTitle = "Error"
             alertMessage = "Sorry, there was a problem calculating your bedtime."
         }
-        
-        showingAlert = true
     }
     
     var body: some View {
         NavigationView {
-            Form {
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("When do you want to wake up?")
-                        .font(.headline)
+            VStack {
+                Form {
+                    Section {
+                        DatePicker(
+                            "Please enter a time",
+                            selection: $wakeUp,
+                            displayedComponents: .hourAndMinute
+                        )
+                        .labelsHidden()
+                        .onReceive([self.wakeUp].publisher.first(), perform: { _ in
+                            calculateBedtime()
+                        })
+                    } header: {
+                        Text("When do you want to wake up?")
+                            .font(.headline)
+                    }
                     
-                    DatePicker(
-                        "Please enter a time",
-                        selection: $wakeUp,
-                        displayedComponents: .hourAndMinute
-                    )
-                    .labelsHidden()
-                }
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Desired amount of sleep")
-                        .font(.headline)
+                    Section {
+                        Picker("Number of cups", selection: $coffeeAmount) {
+                            ForEach(0..<20) { index in
+                                Text("\(index + 1)")
+                            }
+                        }
+                        .onReceive([self.coffeeAmount].publisher.first(), perform: { _ in
+                            calculateBedtime()
+                        })
+                    } header: {
+                        Text("Desired amount of sleep")
+                            .font(.headline)
+                    }
                     
-                    Stepper(
-                        coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups",
-                        value: $coffeeAmount,
-                        in: 1...20
-                    )
+                    Section {
+                        Text("\(alertTitle)").foregroundStyle(.secondary)
+                        Text("\(alertMessage)").foregroundStyle(.blue)
+                    }
+                    .font(.system(size: 24))
+                    .bold()
                 }
-            }
-            .navigationTitle("BetterRest")
-            .toolbar {
-                Button("Calculate", action: calculateBedtime)
-            }
-            .alert(alertTitle, isPresented: $showingAlert) {
-                Button("OK") {}
-            } message: {
-                Text(alertMessage)
+                .navigationTitle("BetterRest")
             }
         }
     }
