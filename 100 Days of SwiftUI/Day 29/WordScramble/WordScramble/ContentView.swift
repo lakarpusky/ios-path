@@ -16,13 +16,14 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    @State private var score = 0
     
     func addNewWord() {
         // .. lowercase and trim the word, to make sure we don't add diplicated words with case differences
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
         // .. exit if the remaining string is empty
-        guard answer.count > 0 else { return }
+        guard answer.count >= 3 || answer != rootWord else { return }
         
         // .. extra validation to come
         guard isOrigin(word: answer) else {
@@ -30,7 +31,6 @@ struct ContentView: View {
                 title: "Word used already",
                 message: "Be more original"
             )
-            
             return
         }
         
@@ -39,7 +39,6 @@ struct ContentView: View {
                 title: "Word not possibe",
                 message: "You can't spell that word from \(rootWord)"
             )
-            
             return
         }
         
@@ -48,7 +47,6 @@ struct ContentView: View {
                 title: "Word not recognized",
                 message: "You can't just make them up, you know!"
             )
-            
             return
         }
         
@@ -56,6 +54,7 @@ struct ContentView: View {
             usedWords.insert(answer, at: 0)
         }
         
+        score += answer.count
         newWord = ""
     }
     
@@ -120,30 +119,43 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                Section {
-                    TextField("Enter your word", text: $newWord)
-                        .textInputAutocapitalization(.never)
-                }
-                
-                Section {
-                    ForEach(usedWords, id: \.self) { word in
-                        HStack {
-                            Image(systemName: "\(word.count).circle")
-                            Text(word)
+            VStack {
+                List {
+                    Section {
+                        TextField("Enter your word", text: $newWord)
+                            .textInputAutocapitalization(.never)
+                    }
+                    
+                    Section {
+                        ForEach(usedWords, id: \.self) { word in
+                            HStack {
+                                Image(systemName: "\(word.count).circle")
+                                Text(word)
+                            }
                         }
                     }
                 }
+                .navigationTitle(rootWord)
+                .toolbar {
+                    Button("Start Game", action: startGame)
+                        .bold()
+                }
+                
+                Spacer()
+                Text("Score: \(score + usedWords.count)".uppercased())
+                    .font(.system(size: 24))
+                    .bold()
+                    .foregroundStyle(.blue)
             }
         }
-        .navigationTitle(rootWord)
-        .onSubmit(addNewWord)
         .onAppear(perform: startGame)
+        .onSubmit(addNewWord)
         .alert(errorTitle, isPresented: $showingError) {
             Button("OK", role: .cancel) { }
         } message: {
             Text(errorMessage)
         }
+        
     }
 }
 
