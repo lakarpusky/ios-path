@@ -9,46 +9,104 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let people = ["Finn", "Leia", "Luke", "Rey"]
+    @State private var usedWords = [String]()
+    @State private var rootWord = ""
+    @State private var newWord = ""
     
-    let input = "a b c"
-    let inputBreaks = """
-        a
-        b
-        c
-    """
+    @State private var errorTitle = ""
+    @State private var errorMessage = ""
+    @State private var showingError = false
     
-    init() {
-        if let fileURL = Bundle.main.url(forResource: "some-file", withExtension: "txt") {
-            if let fileContents = try? String(contentsOf: fileURL) {
-                print(fileContents)
+    func addNewWord() {
+        // .. lowercase and trim the word, to make sure we don't add diplicated words with case differences
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // .. exit if the remaining string is empty
+        guard answer.count > 0 else { return }
+        
+        // .. extra validation to come
+        guard isOrigin(word: answer) else {
+            wordError(
+                title: "Word used already",
+                message: "Be more original"
+            )
+            
+            return
+        }
+        
+        guard isPossible(word: answer) else {
+            wordError(
+                title: "Word not possibe",
+                message: "You can't spell that word from \(rootWord)"
+            )
+            
+            return
+        }
+        
+        guard isReal(word: answer) else {
+            wordError(
+                title: "Word not recognized",
+                message: "You can't just make them up, you know!"
+            )
+            
+            return
+        }
+        
+        withAnimation {
+            usedWords.insert(answer, at: 0)
+        }
+        
+        newWord = ""
+    }
+    
+    func startGame() {
+        // .. 1. find the URL for start.txt in our app bundle
+        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
+            // .. 2. load start.txt into a string
+            if let startWords = try? String(contentsOf: startWordsURL) {
+                // .. 3. split the string up into an array og strings, splitting on line breaks
+                let allWords = startWords.components(separatedBy: "\n")
+                
+                // .. 4. pick one random word, or use "silkworm" as a sensible default
+                rootWord =  allWords.randomElement() ?? "silkworm"
+                
+                // .. if we are here everything has worked, so we can exit
+                return
             }
         }
         
-        // .. simple string to array of strings
-        let _ = input.components(separatedBy: " ")
+        // .. if were are *here* then there was a problem - trigger a crash and report the error
+        fatalError("Could not load start.txt from bundle.")
+    }
+    
+    func isOrigin(word: String) -> Bool {
+        !usedWords.contains(word)
+    }
+    
+    func isPossible(word: String) -> Bool {
+        var tempWord = rootWord
         
-        // .. into a string array
-        let letters = inputBreaks.components(separatedBy: "\n")
+        for letter in word {
+            if let pos = tempWord.firstIndex(of: letter) {
+                tempWord.remove(at: pos)
+            } else {
+                return false
+            }
+        }
         
-        // .. one random item from the array
-        let letter = letters.randomElement()
-        
-        // .. to trim all whitespace at the start and end of a string
-        let _ = letter?.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // .. to check a string for misspelled words
-        let word = "swift"
-        
-        // .. 1: create an instance of "UITextChecker" that we can use to check that string
+        return true
+    }
+    
+    func wordError(title: String, message: String) {
+        errorTitle = title
+        errorMessage = message
+        showingError = true
+    }
+    
+    func isReal(word: String) -> Bool {
         let checker = UITextChecker()
-        
-        // .. 2: we need to tell the checker how much of our string we want to check
-        // .. we need to ask swift to create an Objective-C range using the entire length of all our characters
         let range = NSRange(location: 0, length: word.utf16.count)
         
-        // .. 3: we can ask our text checker to report where it found any misspellings in our word
-        // .. sends back another Objective-C string range, telling us where the misspelling was found
         let misspelledRange = checker.rangeOfMisspelledWord(
             in: word,
             range: range,
@@ -57,46 +115,34 @@ struct ContentView: View {
             language: "en"
         )
         
-        // .. if the Objective-C range comes back as empty, then we get back the special value "NSNotFound"
-        // .. we could check our spelling result to see whether there was a mistake or not
-        let allGood = misspelledRange.location == NSNotFound
-        print("all good \(allGood)")
+        return misspelledRange.location == NSNotFound
     }
     
     var body: some View {
-        VStack {
+        NavigationView {
             List {
                 Section {
-                    Text("Static row 1")
-                    Text("Static row 2")
-                }
-                
-                ForEach(0..<5) {
-                    Text("Dynamic row \($0)")
+                    TextField("Enter your word", text: $newWord)
+                        .textInputAutocapitalization(.never)
                 }
                 
                 Section {
-                    Text("Static row 3")
-                    Text("Static row 4")
+                    ForEach(usedWords, id: \.self) { word in
+                        HStack {
+                            Image(systemName: "\(word.count).circle")
+                            Text(word)
+                        }
+                    }
                 }
             }
-            .listStyle(.grouped)
-            
-            List(0..<5) {
-                Text("Dynamic row \($0)")
-            }
-            
-            List(people, id: \.self) {
-                Text($0)
-            }
-            
-            List {
-                Text("Static row")
-                
-                ForEach(people, id: \.self) {
-                    Text($0)
-                }
-            }
+        }
+        .navigationTitle(rootWord)
+        .onSubmit(addNewWord)
+        .onAppear(perform: startGame)
+        .alert(errorTitle, isPresented: $showingError) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(errorMessage)
         }
     }
 }
