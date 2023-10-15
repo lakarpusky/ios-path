@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Day 35/Edutainment/Edutainment.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Day 32/Animations/Animations.xcodeproj">
    </FileRef>
    <FileRef
