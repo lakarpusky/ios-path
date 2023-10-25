@@ -22,6 +22,10 @@
 		B0BBCC582AE63AC6002E4A0A /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBCC572AE63AC6002E4A0A /* Color-Theme.swift */; };
 		B0BBCC5A2AE766FE002E4A0A /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBCC592AE766FE002E4A0A /* MissionView.swift */; };
 		B0BBCC5C2AE76F5A002E4A0A /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBCC5B2AE76F5A002E4A0A /* AstronautView.swift */; };
+		B0BBCC5E2AE8BC91002E4A0A /* HScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBCC5D2AE8BC91002E4A0A /* HScrollView.swift */; };
+		B0BBCC602AE8C284002E4A0A /* RDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBCC5F2AE8C284002E4A0A /* RDividerView.swift */; };
+		B0BBCC662AE8D46B002E4A0A /* GridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBCC652AE8D46B002E4A0A /* GridItemView.swift */; };
+		B0BBCC682AE8D4ED002E4A0A /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBCC672AE8D4ED002E4A0A /* ListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		B0BBCC572AE63AC6002E4A0A /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		B0BBCC592AE766FE002E4A0A /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		B0BBCC5B2AE76F5A002E4A0A /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		B0BBCC5D2AE8BC91002E4A0A /* HScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScrollView.swift; sourceTree = "<group>"; };
+		B0BBCC5F2AE8C284002E4A0A /* RDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDividerView.swift; sourceTree = "<group>"; };
+		B0BBCC652AE8D46B002E4A0A /* GridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemView.swift; sourceTree = "<group>"; };
+		B0BBCC672AE8D4ED002E4A0A /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +83,12 @@
 			children = (
 				B08D88552AE4AC3C00435B16 /* MoonshotApp.swift */,
 				B08D88572AE4AC3C00435B16 /* ContentView.swift */,
+				B0BBCC652AE8D46B002E4A0A /* GridItemView.swift */,
+				B0BBCC672AE8D4ED002E4A0A /* ListItemView.swift */,
 				B0BBCC572AE63AC6002E4A0A /* Color-Theme.swift */,
 				B0BBCC592AE766FE002E4A0A /* MissionView.swift */,
+				B0BBCC5F2AE8C284002E4A0A /* RDividerView.swift */,
+				B0BBCC5D2AE8BC91002E4A0A /* HScrollView.swift */,
 				B0BBCC5B2AE76F5A002E4A0A /* AstronautView.swift */,
 				B0BBCC552AE63323002E4A0A /* Mission.swift */,
 				B0BBCC502AE63046002E4A0A /* Astronaut.swift */,
@@ -180,16 +192,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BBCC682AE8D4ED002E4A0A /* ListItemView.swift in Sources */,
 				B08D886C2AE4BB5E00435B16 /* ScrollingGrid.swift in Sources */,
 				B08D886A2AE4B73B00435B16 /* NavigationLink.swift in Sources */,
 				B0BBCC562AE63323002E4A0A /* Mission.swift in Sources */,
+				B0BBCC662AE8D46B002E4A0A /* GridItemView.swift in Sources */,
 				B08D88582AE4AC3C00435B16 /* ContentView.swift in Sources */,
 				B0BBCC512AE63046002E4A0A /* Astronaut.swift in Sources */,
 				B08D88562AE4AC3C00435B16 /* MoonshotApp.swift in Sources */,
+				B0BBCC5E2AE8BC91002E4A0A /* HScrollView.swift in Sources */,
 				B0BBCC5C2AE76F5A002E4A0A /* AstronautView.swift in Sources */,
 				B0BBCC532AE630FC002E4A0A /* Bundle-Decodable.swift in Sources */,
 				B0BBCC582AE63AC6002E4A0A /* Color-Theme.swift in Sources */,
 				B08D88682AE4B22C00435B16 /* ScrollView.swift in Sources */,
+				B0BBCC602AE8C284002E4A0A /* RDividerView.swift in Sources */,
 				B0BBCC5A2AE766FE002E4A0A /* MissionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

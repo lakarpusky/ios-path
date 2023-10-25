@@ -12,42 +12,29 @@ struct ContentView: View {
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
     
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
+    @State var griditemSize: CGFloat? = 150
+    @State var gridView = true
+    
+    func toggleView() {
+        griditemSize = !gridView ? 150 : .infinity
+        gridView.toggle()
+    }
     
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: [
+                    GridItem(.adaptive(minimum: griditemSize!))
+                ]) {
                     ForEach(missions) { mission in
                         NavigationLink {
                             MissionView(mission: mission, astronauts: astronauts)
                         } label: {
-                            VStack {
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                
-                                VStack {
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundStyle(.white)
-                                    Text(mission.formattedLaunchDate)
-                                        .font(.caption)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
+                            if gridView {
+                                GridItemView(mission: mission)
+                            } else {
+                                ListItemView(mission: mission)
                             }
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
                         }
                     }
                 }
@@ -56,6 +43,19 @@ struct ContentView: View {
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .toolbar {
+                HStack {
+                    Button(action: toggleView) {
+                        Image(systemName: "square.grid.2x2")
+                    }
+                    .disabled(gridView)
+                    
+                    Button(action: toggleView) {
+                        Image(systemName: "list.bullet")
+                    }
+                    .disabled(!gridView)
+                }
+            }
         }
     }
 }
