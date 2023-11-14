@@ -15,6 +15,9 @@
 		B06CA17D2B016588004A4AD6 /* DiffDataTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CA17C2B016588004A4AD6 /* DiffDataTypeView.swift */; };
 		B06CA1812B0169DF004A4AD6 /* BackHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CA1802B0169DF004A4AD6 /* BackHomeView.swift */; };
 		B06CA1832B017340004A4AD6 /* SaveNavStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CA1822B017340004A4AD6 /* SaveNavStackView.swift */; };
+		B06CA1852B034D08004A4AD6 /* CustomizeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CA1842B034D08004A4AD6 /* CustomizeNavBarView.swift */; };
+		B06CA1872B03505C004A4AD6 /* PlacingToolbarButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CA1862B03505C004A4AD6 /* PlacingToolbarButtonsView.swift */; };
+		B06CA1892B035253004A4AD6 /* EditNavTitleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CA1882B035253004A4AD6 /* EditNavTitleVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		B06CA17C2B016588004A4AD6 /* DiffDataTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffDataTypeView.swift; sourceTree = "<group>"; };
 		B06CA1802B0169DF004A4AD6 /* BackHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackHomeView.swift; sourceTree = "<group>"; };
 		B06CA1822B017340004A4AD6 /* SaveNavStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNavStackView.swift; sourceTree = "<group>"; };
+		B06CA1842B034D08004A4AD6 /* CustomizeNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeNavBarView.swift; sourceTree = "<group>"; };
+		B06CA1862B03505C004A4AD6 /* PlacingToolbarButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacingToolbarButtonsView.swift; sourceTree = "<group>"; };
+		B06CA1882B035253004A4AD6 /* EditNavTitleVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNavTitleVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,10 @@
 				B06CA16E2B00AC74004A4AD6 /* ContentView.swift */,
 				B06CA17A2B0163AF004A4AD6 /* ProgrammaticNavView.swift */,
 				B06CA1802B0169DF004A4AD6 /* BackHomeView.swift */,
+				B06CA1842B034D08004A4AD6 /* CustomizeNavBarView.swift */,
 				B06CA1822B017340004A4AD6 /* SaveNavStackView.swift */,
+				B06CA1862B03505C004A4AD6 /* PlacingToolbarButtonsView.swift */,
+				B06CA1882B035253004A4AD6 /* EditNavTitleVIew.swift */,
 				B06CA17C2B016588004A4AD6 /* DiffDataTypeView.swift */,
 				B06CA1702B00AC75004A4AD6 /* Assets.xcassets */,
 				B06CA1722B00AC75004A4AD6 /* Preview Content */,
@@ -154,6 +163,9 @@
 				B06CA1832B017340004A4AD6 /* SaveNavStackView.swift in Sources */,
 				B06CA17B2B0163AF004A4AD6 /* ProgrammaticNavView.swift in Sources */,
 				B06CA16D2B00AC74004A4AD6 /* NavigationApp.swift in Sources */,
+				B06CA1892B035253004A4AD6 /* EditNavTitleVIew.swift in Sources */,
+				B06CA1872B03505C004A4AD6 /* PlacingToolbarButtonsView.swift in Sources */,
+				B06CA1852B034D08004A4AD6 /* CustomizeNavBarView.swift in Sources */,
 				B06CA1812B0169DF004A4AD6 /* BackHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
