@@ -7,31 +7,9 @@
 
 import SwiftUI
 
-class Expenses: ObservableObject {
-    @Published var items = [ExpenseItem]() {
-        didSet {
-            if let encoded = try? JSONEncoder().encode(items) {
-                UserDefaults.standard.set(encoded, forKey: "Items")
-            }
-        }
-    }
-    
-    init() {
-        if let savedItems = UserDefaults.standard.data(forKey: "Items") {
-            if let decoedItems = try? JSONDecoder().decode([ExpenseItem].self, from: savedItems) {
-                items = decoedItems
-                return
-            }
-        }
-        
-        items = []
-    }
-}
-
 struct ContentView: View {
-    
-    @StateObject var expenses = Expenses()
-    @State private var showingAddExpense = false
+    @State private var path = NavigationPath()
+    @State private var expenses = Expenses()
     
     let emptyText: some View = Text("Add some expenses to display here :)")
         .foregroundStyle(.secondary)
@@ -42,14 +20,13 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $path) {
             List {
                 ExpensesList(
                     type: "Personal",
                     items: expenses.items.filter { $0.type == "Personal" },
                     onDelete: removeItems
                 )
-                
                 ExpensesList(
                     type: "Business",
                     items: expenses.items.filter { $0.type == "Business" },
@@ -57,16 +34,14 @@ struct ContentView: View {
                 )
             }
             .navigationTitle("iExpense")
+            .navigationDestination(for: Int.self) { _ in
+                AddView(expenses: expenses)
+            }
             .toolbar {
-                Button {
-                    showingAddExpense = true
-                } label: {
-                    Image(systemName: "plus")
+                Button("Add Expense", systemImage: "plus") {
+                    path.append(0)
                 }
             }
-        }
-        .sheet(isPresented: $showingAddExpense) {
-            AddView(expenses: expenses)
         }
     }
 }
