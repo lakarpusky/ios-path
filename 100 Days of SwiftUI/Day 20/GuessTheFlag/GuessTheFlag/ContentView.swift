@@ -12,18 +12,17 @@ struct FlagImage: View {
     
     var body: some View {
         Image(pos)
-            .renderingMode(.original)
-            .clipShape(Capsule())
+//            .renderingMode(.original)
+            .clipShape(.capsule)
             .shadow(radius: 5)
     }
 }
 
 struct ContentView: View {
-    
     @State private var showingStore = false
     @State private var scoreTitle = ""
     @State private var userScore = 0
-    
+    @State private var correctAnswer = Int.random(in: 0...2)
     @State private var countries = [
         "Estonia",
         "France",
@@ -38,14 +37,37 @@ struct ContentView: View {
         "US"
     ].shuffled()
     
-    @State private var correctAnswer = Int.random(in: 0...2)
+    func flagTapped(_ number: Int) {
+        if number == correctAnswer {
+            scoreTitle = "Correct"
+            userScore += 1
+        } else {
+            scoreTitle = "Wrong"
+            if userScore > 0 {
+                userScore -= 1
+            }
+        }
+        
+        showingStore = true
+    }
+    
+    func askQuestion() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+    }
     
     var body: some View {
         ZStack {
             RadialGradient(
                 stops: [
-                    .init(color: Color(red: 0.1, green: 0.2, blue: 0.45), location: 0.3),
-                    .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3)
+                    .init(
+                        color: Color(red: 0.1, green: 0.2, blue: 0.45), 
+                        location: 0.3
+                    ),
+                    .init(
+                        color: Color(red: 0.76, green: 0.15, blue: 0.26), 
+                        location: 0.3
+                    )
                 ],
                 center: .top,
                 startRadius: 200,
@@ -55,7 +77,7 @@ struct ContentView: View {
             
             VStack {
                 Text("Guess the Flag")
-                    .font(.largeTitle.bold())
+                    .font(.largeTitle.weight(.bold))
                     .foregroundColor(.white)
                 
                 Spacer()
@@ -78,10 +100,10 @@ struct ContentView: View {
                         }
                     }
                 }
-                .frame(maxWidth: 320)
+                .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
                 .background(.regularMaterial)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .clipShape(.rect(cornerRadius: 20))
                 
                 Spacer()
                 Spacer()
@@ -94,30 +116,12 @@ struct ContentView: View {
             }
             .padding()
             
-        }.alert(scoreTitle, isPresented: $showingStore) {
+        }
+        .alert(scoreTitle, isPresented: $showingStore) {
             Button("Continue", action: askQuestion)
         } message: {
             Text("Your score is \(userScore)")
         }
-    }
-    
-    func flagTapped(_ number: Int) {
-        if number == correctAnswer {
-            scoreTitle = "Correct"
-            userScore += 1
-        } else {
-            scoreTitle = "Wrong"
-            if userScore > 0 {
-                userScore -= 1
-            }
-        }
-        
-        showingStore = true
-    }
-    
-    func askQuestion() {
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
     }
 }
 
