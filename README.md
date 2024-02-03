@@ -1,7 +1,6 @@
-## My iOS Developer Roadmap • 2024
->**Repository to document my journey to becoming an iOS Developer**
-
-<br>
+# My iOS Developer Roadmap • 2024
+>***Repository to document my journey to becoming an iOS Developer***
+#
 ## 📚 ₋ **The basics**
 ---
 
@@ -12,8 +11,8 @@
 ## ✍️ ₋ **Common topics**
 ---
 
->1. **Human Interface Guideline**
->2. **iOS Technologies**
+1. **Human Interface Guideline**
+2. **iOS Technologies**
 
 	  - App architect
 	  - App life-cycle
@@ -21,7 +20,7 @@
 		  - AutoLayout
 	  - Multi touch event handling
 
->3. **Cocoa Design Patterns**
+3. **Cocoa Design Patterns**
 
     - MVC
     - Singleton
@@ -29,7 +28,7 @@
     - Responder chain **
     - Observer
 
->4. **Networking programming**
+4. **Networking programming**
 
     - RestFul apis
 
@@ -37,65 +36,65 @@
 ## 😪 ₋ **Getting Deeper**
 ---
 
->1. **Swift**
+1. **Swift**
 
 	  - Swift Standard
 	  - Swift Foundation
 	  - Protocol oriented programming **
 	  - Concurrent programming
-        - Dispatch Queque
+      	- Dispatch Queque
     - Advanced design pattern **
-        - Viper
-          - RxSwift
-      - Mvvm
+      	- Viper
+        	- RxSwift
+        - Mvvm
 
->2. **System Framework**
+2. **System Framework**
 
     - Swift standard
     - Swift foundation
     - Cocoa touch (UIKit)
 
->3. **Data Persistence**
+3. **Data Persistence**
 
     - Core data
     - Serialize
-       - JSON
-      - PList
+    	- JSON
+    	- PList
     - Cloud
-      - iCloud
-      - Firebase
+    	- iCloud
+    	- Firebase
 
->4. **Project & Workspace**
+4. **Project & Workspace**
 
     - Build config
     - Scheme
     - Target
     - Package manager
 	    - Swift package manager
-	    - CocoaPods (**)
+	    - CocoaPods **
 
->5. **Instruments**
+5. **Instruments**
 
     - Allocations
     - Leaks
     - Time profile
     - Network
 
->6. **Testing**
+6. **Testing**
 
     - XcTesting
-      - TDD
-      - Mocks
-    - Ui test (**)
-    - Code coverage (**)
+    	- TDD
+    	- Mocks
+    - Ui test **
+    - Code coverage **
 
->7. **Debugging**
+7. **Debugging**
 
     - Tool & Tips
       - LLDB
       - BreakPointer
 
->8. **Build & deployment**
+8. **Build & deployment**
 
     - CI
       - Jenkins
@@ -106,11 +105,11 @@
     - Analytic tools
 	    - GA
 	    - Fabric
-	      - Crashlytics
+	   		- Crashlytics
 	    - TestFlight
-	    - UserHabit (**)
+	    - UserHabit **
 
->9. **App Store**
+9. **App Store**
 
     - Review guideline
     - iTunes Connect
