@@ -1,4 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:Checkpoint-09.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Optionals.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-08.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Protocol-extensions.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Extensions.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Opaque-return-types.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Protocols.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-07.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Classes-variables.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Classes-deinitializer.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Classes-copy.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Classes-initializers.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Classes-inheritance.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Classes.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-06.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Structs-static-properties-methods.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Structs-access-control.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Structs-initializers.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Structs-property-observer.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Structs-compute-property.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Structs.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-05.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Functions-as-parameters.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Closures-trailing-shortand-syntax.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Closures.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-04.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Functions-handle-errors.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Parameters-default-values.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Functions-parameter-labels.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Functions-return-multiple-values.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Functions-return-values.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Functions.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-03.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Skip-loop-items.playground">
+   </FileRef>
+   <FileRef
+      location = "group:While-loop.playground">
+   </FileRef>
+   <FileRef
+      location = "group:For-loop.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Ternary-operator.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Switch.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Multiple-conditions.playground">
+   </FileRef>
+   <FileRef
+      location = "group:True-false.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-02.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Type-annotations.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Enums.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Sets.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Dictionaries.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Arrays.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Checkpoint-01.playground">
+   </FileRef>
+   <FileRef
+      location = "group:String-interpolation.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Constants-variables.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Booleans.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Decimal-numbers.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Whole-numbers.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Strings.playground">
+   </FileRef>
 </Workspace>
