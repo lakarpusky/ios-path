@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Starting SwiftUI/UnitConversion/UnitConversion.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Starting SwiftUI/WeSplit/WeSplit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Checkpoint-09.playground">
    </FileRef>
    <FileRef

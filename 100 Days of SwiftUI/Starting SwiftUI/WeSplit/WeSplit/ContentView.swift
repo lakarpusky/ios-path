@@ -91,7 +91,7 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text("Total amount for the check: \(totalAmount)")
+                    Text("Total amount for the check: \(totalAmount.formatted())")
                 }
             }
             .navigationTitle("WeSplit")
