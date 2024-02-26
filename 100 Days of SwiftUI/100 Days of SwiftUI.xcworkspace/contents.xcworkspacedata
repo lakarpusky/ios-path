@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Starting SwiftUI/ViewsAndModifiers/ViewsAndModifiers.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Starting SwiftUI/UnitConversion/UnitConversion.xcodeproj">
    </FileRef>
    <FileRef

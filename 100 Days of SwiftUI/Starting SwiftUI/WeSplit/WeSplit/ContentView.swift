@@ -92,6 +92,7 @@ struct ContentView: View {
                 
                 Section {
                     Text("Total amount for the check: \(totalAmount.formatted())")
+                        .foregroundStyle(tipPercentage > 0 ? .black : .red)
                 }
             }
             .navigationTitle("WeSplit")
