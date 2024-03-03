@@ -16,9 +16,6 @@ struct ContentView: View {
     @State private var alertMessage = ""
     @State private var showingAlert = false
     
-    let now = Date.now
-    let tomorrow = Date.now.addingTimeInterval(86400) // number of seconds in a day
-    
     static var defaultWakeTime: Date {
         var components = DateComponents()
         components.hour = 7
@@ -29,10 +26,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             Form {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("When do you want to wake up?")
-                        .font(.headline)
-                    
+                Section("When do you want to wake up?") {
                     DatePicker(
                         "Please enter a time",
                         selection: $wakeUp,
@@ -41,10 +35,7 @@ struct ContentView: View {
                     .labelsHidden() // we don't get a second label for the picker
                 }
                 
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Desired amount of sleep")
-                        .font(.headline)
-                    
+                Section("Desired amount of sleep") {
                     Stepper(
                         "\(sleepAmount.formatted()) hours",
                         value: $sleepAmount,
@@ -53,17 +44,20 @@ struct ContentView: View {
                     )
                 }
                 
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Daily coffee intake")
-                        .font(.headline)
-                    
-                    Stepper(
+                Section("Daily coffee intake") {
+                    //Stepper(
                         // .. specialized form of Markdown
                         // .. "cup" needs to be inflected to match whatever is in the variable
-                        "^[\(coffeeAmount) cup](inflect: true)", // auto pluralization by swift
-                        value: $coffeeAmount,
-                        in: 1...20
-                    )
+                        //"^[\(coffeeAmount) cup](inflect: true)", // auto pluralization by swift
+                        //value: $coffeeAmount,
+                        //in: 1...20
+                    //)
+                    Picker("^[\(coffeeAmount) cup](inflect: true)", selection: $coffeeAmount) {
+                        ForEach(1...20, id: \.self) {
+                            Text("\($0)")
+                        }
+                    }
+                    .pickerStyle(.navigationLink)
                 }
                 
                 //Text(Date.now, format: .dateTime.hour().minute())
