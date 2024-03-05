@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    @State private var score = 0
     
     var body: some View {
         NavigationStack {
@@ -40,6 +41,13 @@ struct ContentView: View {
             .alert(errorTitle, isPresented: $showingError) { } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                Button("Start Game", action: startGame)
+            }
+            
+            Text("Score: \(score) ptos")
+                .font(.title.weight(.semibold))
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
         }
     }
     
@@ -56,6 +64,12 @@ struct ContentView: View {
         // .. exit if string is empty
         guard answer.count > 0 else { return }
         
+        // .. exit if shorter than three letters
+        guard answer.count > 3 else {
+            wordError(title: "Word too short", message: "Only wordw larger than three letters")
+            return
+        }
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
@@ -71,6 +85,7 @@ struct ContentView: View {
             return
         }
         
+        score += answer.count
         // .. we could animate that by:
         withAnimation {
             usedWords.insert(answer, at: 0) // adding always on top
@@ -126,6 +141,9 @@ struct ContentView: View {
                 // 4. pick one random word
                 rootWord = allWords.randomElement() ?? "silkworm" // .. use it as a sensible default
                 
+                newWord = ""
+                usedWords = []
+                score = 0
                 // .. worked! so we can exit
                 return
             }
