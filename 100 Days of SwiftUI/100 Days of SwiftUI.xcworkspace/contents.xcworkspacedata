@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Scaling up to bigger apps/iExpense/iExpense.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Expanding your skills/Animations/Animations.xcodeproj">
    </FileRef>
    <FileRef
