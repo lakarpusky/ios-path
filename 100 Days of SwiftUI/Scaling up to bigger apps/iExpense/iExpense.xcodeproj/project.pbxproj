@@ -17,6 +17,8 @@
 		B0ED385F2B9A7C6E00076395 /* ShowHideViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED385E2B9A7C6E00076395 /* ShowHideViews.swift */; };
 		B0ED38612B9A7CC800076395 /* UsingStateWithClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED38602B9A7CC800076395 /* UsingStateWithClasses.swift */; };
 		B0ED38632B9AB44D00076395 /* SharingStateWithObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED38622B9AB44D00076395 /* SharingStateWithObservable.swift */; };
+		B0ED38672B9AB88A00076395 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED38662B9AB88A00076395 /* ExpenseItem.swift */; };
+		B0ED386B2B9ABDFA00076395 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED386A2B9ABDFA00076395 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		B0ED385E2B9A7C6E00076395 /* ShowHideViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHideViews.swift; sourceTree = "<group>"; };
 		B0ED38602B9A7CC800076395 /* UsingStateWithClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingStateWithClasses.swift; sourceTree = "<group>"; };
 		B0ED38622B9AB44D00076395 /* SharingStateWithObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingStateWithObservable.swift; sourceTree = "<group>"; };
+		B0ED38662B9AB88A00076395 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
+		B0ED386A2B9ABDFA00076395 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				B0ED385E2B9A7C6E00076395 /* ShowHideViews.swift */,
 				B0ED38602B9A7CC800076395 /* UsingStateWithClasses.swift */,
 				B0ED38622B9AB44D00076395 /* SharingStateWithObservable.swift */,
+				B0ED386A2B9ABDFA00076395 /* AddView.swift */,
+				B0ED38662B9AB88A00076395 /* ExpenseItem.swift */,
 				B0ED384E2B9A677E00076395 /* Assets.xcassets */,
 				B0ED38502B9A677E00076395 /* Preview Content */,
 			);
@@ -157,8 +163,10 @@
 			files = (
 				B0ED384D2B9A677D00076395 /* ContentView.swift in Sources */,
 				B0ED385F2B9A7C6E00076395 /* ShowHideViews.swift in Sources */,
+				B0ED386B2B9ABDFA00076395 /* AddView.swift in Sources */,
 				B0ED38632B9AB44D00076395 /* SharingStateWithObservable.swift in Sources */,
 				B0ED385D2B9A7B9B00076395 /* DeletingItemsOnDelete.swift in Sources */,
+				B0ED38672B9AB88A00076395 /* ExpenseItem.swift in Sources */,
 				B0ED38612B9A7CC800076395 /* UsingStateWithClasses.swift in Sources */,
 				B0ED385B2B9A79E700076395 /* ArchivingObjectsWithCodable.swift in Sources */,
 				B0ED38592B9A769900076395 /* StoringUserSettingsUserDefaults.swift in Sources */,
