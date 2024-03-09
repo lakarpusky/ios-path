@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+struct AmountStyled: View {
+    let amount: Double
+    
+    var body: some View {
+        Text(
+            amount,
+            format: .currency(
+                code: Locale.current.currency?.identifier ?? "USD"
+            )
+        )
+    }
+}
+
 struct ContentView: View {
     @State private var expenses = Expenses()
     @State private var showAddExpense = false
@@ -17,13 +30,26 @@ struct ContentView: View {
                 ForEach(expenses.items) { item in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
+                            Text(item.name).font(.headline)
+                            Text(item.type).foregroundStyle(.gray)
                         }
                         
                         Spacer()
-                        Text(item.amount, format: .currency(code: "USD"))
+                        
+                        Text(
+                            item.amount,
+                            format: .currency(
+                                code: Locale.current.currency?.identifier ?? "USD"
+                            )
+                        )
+                        .font(
+                            .headline.weight(
+                                item.amount > 100 ? .semibold : .regular
+                            )
+                        )
+                        .foregroundStyle(
+                            item.amount < 10 ? .green : item.amount < 100 ? .blue : .red
+                        )
                     }
                 }
                 .onDelete(perform: removeItems)
