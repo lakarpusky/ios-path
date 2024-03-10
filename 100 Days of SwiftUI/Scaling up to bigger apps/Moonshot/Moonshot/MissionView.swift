@@ -38,6 +38,10 @@ struct MissionView: View {
                     }
                     .padding(.top)
                 
+                Text(mission.formattedMissionLaunchDate)
+                    .foregroundStyle(.white.opacity(0.7))
+                    .padding(.top)
+                
                 VStack(alignment: .leading) {
                     HDivider(height: 2)
                     
