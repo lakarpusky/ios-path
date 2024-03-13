@@ -15,6 +15,9 @@
 		B0FAD3432BA0170800964808 /* DifferentDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAD3422BA0170800964808 /* DifferentDataTypes.swift */; };
 		B0FAD3452BA019F500964808 /* ReturnToRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAD3442BA019F500964808 /* ReturnToRootView.swift */; };
 		B0FAD3472BA01C6000964808 /* SavePathsUsingCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAD3462BA01C6000964808 /* SavePathsUsingCodable.swift */; };
+		B0FAD3492BA1530000964808 /* CustomizingNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAD3482BA1530000964808 /* CustomizingNavigationBar.swift */; };
+		B0FAD34B2BA154F600964808 /* PlacingToolbarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAD34A2BA154F600964808 /* PlacingToolbarButtons.swift */; };
+		B0FAD34D2BA156BA00964808 /* NavigationTitleEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAD34C2BA156BA00964808 /* NavigationTitleEditable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		B0FAD3422BA0170800964808 /* DifferentDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentDataTypes.swift; sourceTree = "<group>"; };
 		B0FAD3442BA019F500964808 /* ReturnToRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnToRootView.swift; sourceTree = "<group>"; };
 		B0FAD3462BA01C6000964808 /* SavePathsUsingCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePathsUsingCodable.swift; sourceTree = "<group>"; };
+		B0FAD3482BA1530000964808 /* CustomizingNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizingNavigationBar.swift; sourceTree = "<group>"; };
+		B0FAD34A2BA154F600964808 /* PlacingToolbarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacingToolbarButtons.swift; sourceTree = "<group>"; };
+		B0FAD34C2BA156BA00964808 /* NavigationTitleEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleEditable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,9 @@
 				B0FAD3422BA0170800964808 /* DifferentDataTypes.swift */,
 				B0FAD3442BA019F500964808 /* ReturnToRootView.swift */,
 				B0FAD3462BA01C6000964808 /* SavePathsUsingCodable.swift */,
+				B0FAD3482BA1530000964808 /* CustomizingNavigationBar.swift */,
+				B0FAD34A2BA154F600964808 /* PlacingToolbarButtons.swift */,
+				B0FAD34C2BA156BA00964808 /* NavigationTitleEditable.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -150,10 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0FAD3332B9E4F1200964808 /* ContentView.swift in Sources */,
+				B0FAD34D2BA156BA00964808 /* NavigationTitleEditable.swift in Sources */,
 				B0FAD3472BA01C6000964808 /* SavePathsUsingCodable.swift in Sources */,
 				B0FAD3452BA019F500964808 /* ReturnToRootView.swift in Sources */,
 				B0FAD3432BA0170800964808 /* DifferentDataTypes.swift in Sources */,
+				B0FAD3492BA1530000964808 /* CustomizingNavigationBar.swift in Sources */,
 				B0FAD3412BA00CD300964808 /* ProgrammaticNavigation.swift in Sources */,
+				B0FAD34B2BA154F600964808 /* PlacingToolbarButtons.swift in Sources */,
 				B0FAD3312B9E4F1200964808 /* NavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
