@@ -17,9 +17,7 @@ struct ListLayout: View {
     
     var body: some View {
         List(missions) { mission in
-            NavigationLink {
-                MissionView(mission: mission, astronauts: astronauts)
-            } label: {
+            NavigationLink(value: mission) {
                 HStack {
                     Image(mission.image)
                         .resizable()
@@ -45,6 +43,9 @@ struct ListLayout: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(.lightBackground)
                 }
+            }
+            .navigationDestination(for: Mission.self) { mission in
+                MissionView(mission: mission, astronauts: astronauts)
             }
             .listRowSeparator(.hidden)
             .listRowBackground(Color.darkBackground)

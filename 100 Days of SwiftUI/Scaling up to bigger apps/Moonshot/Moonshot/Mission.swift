@@ -34,3 +34,13 @@ struct Mission: Codable, Identifiable {
         launchDate?.formatted(date: .complete, time: .omitted) ?? "N/A"
     }
 }
+
+extension Mission: Hashable {
+    static func == (lhs: Mission, rhs: Mission) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}

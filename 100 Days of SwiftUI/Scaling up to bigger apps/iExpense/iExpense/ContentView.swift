@@ -22,10 +22,10 @@ struct AmountStyled: View {
 
 struct ContentView: View {
     @State private var expenses = Expenses()
-    @State private var showAddExpense = false
+    @State private var path = [Int]()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List {
                 ForEach(expenses.items) { item in
                     HStack {
@@ -55,14 +55,14 @@ struct ContentView: View {
                 .onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
+            .navigationDestination(for: Int.self) { _ in
+                AddView(expenses: expenses)
+            }
             .toolbar {
                 Button("Add Expense", systemImage: "plus") {
-                    showAddExpense = true
+                    path.append(1)
                 }
             }
-        }
-        .sheet(isPresented: $showAddExpense) {
-            AddView(expenses: expenses)
         }
     }
     

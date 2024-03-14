@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddView: View {
-    @State private var name = ""
+    @State private var name = "Add new expense"
     @State private var type = "Personal"
     @State private var amount = 0.0
     
@@ -18,42 +18,41 @@ struct AddView: View {
     let types = ["Bsiness", "Personal"]
     
     var body: some View {
-        NavigationStack {
-            Form {
-                TextField("Name", text: $name)
-                    .textInputAutocapitalization(.never)
-                
-                Picker("Type", selection: $type) {
-                    ForEach(types, id: \.self) {
-                        Text($0)
-                    }
-                }
-                
-                TextField(
-                    "Amount",
-                    value: $amount,
-                    format: .currency(
-                        code: Locale.current.currency?.identifier ?? "USD"
-                    )
-                )
-                .keyboardType(.decimalPad)
-            }
-            .navigationTitle("Add new expense")
-            .toolbar {
-                Button("Save") {
-                    let item = ExpenseItem(name: name, type: type, amount: amount)
-                    expenses.items.append(item)
-                    dismiss()
+        Form {
+            Picker("Type", selection: $type) {
+                ForEach(types, id: \.self) {
+                    Text($0)
                 }
             }
             
-            Button("Cancel") {
-                dismiss()
+            TextField(
+                "Amount",
+                value: $amount,
+                format: .currency(
+                    code: Locale.current.currency?.identifier ?? "USD"
+                )
+            )
+            .keyboardType(.decimalPad)
+        }
+        .navigationTitle($name)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            Button("Save") {
+                let item = ExpenseItem(name: name, type: type, amount: amount)
+                expenses.items.append(item)
+                    dismiss()
             }
+        }
+        
+        Button("Cancel") {
+                dismiss()
         }
     }
 }
 
 #Preview {
-    AddView(expenses: Expenses())
+    NavigationStack {
+        AddView(expenses: Expenses())
+    }
 }
