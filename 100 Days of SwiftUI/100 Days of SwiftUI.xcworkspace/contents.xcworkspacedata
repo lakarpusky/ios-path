@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Scaling up to bigger apps/HabitTracking/HabitTracking.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Scaling up to bigger apps/Navigation/Navigation.xcodeproj">
    </FileRef>
    <FileRef

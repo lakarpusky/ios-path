@@ -8,11 +8,42 @@
 import SwiftUI
 
 struct AddActivityView: View {
+    @State private var title = ""
+    @State private var description = ""
+    
+    @Environment(\.dismiss) var dismiss
+    
+    var activities: Activities
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack(alignment: .bottom) {
+                Form {
+                    TextField("Title", text: $title)
+                    TextField("Description", text: $description)
+                }
+                
+                Button("Cancel", role: .cancel) {
+                    dismiss()
+                }
+                .font(.subheadline.bold())
+                .padding()
+            }
+            .navigationTitle("Add New Activity")
+            .navigationBarTitleDisplayMode(.inline)
+            .ignoresSafeArea(.all, edges: .bottom)
+            .toolbar {
+                Button("Save") {
+                    let item = Activity(title: title, description: description)
+                    activities.items.append(item)
+                    dismiss()
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    AddActivityView()
+    let activities = Activities()
+    return AddActivityView(activities: activities)
 }
