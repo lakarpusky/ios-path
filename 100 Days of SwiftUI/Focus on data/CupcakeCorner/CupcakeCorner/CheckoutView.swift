@@ -10,6 +10,8 @@ import SwiftUI
 struct CheckoutView: View {
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
+    @State private var showError = false
+    @State private var errorMessage = ""
     
     var order: Order
     
@@ -42,9 +44,14 @@ struct CheckoutView: View {
         .navigationBarTitleDisplayMode(.inline)
         .scrollBounceBehavior(.basedOnSize) // .. disable that bounce when there is nothing to scroll
         .alert("Thank you!", isPresented: $showingConfirmation) {
-            Button("OK") {}
+            Button("OK") { }
         } message: {
             Text(confirmationMessage)
+        }
+        .alert("Something went wrong!", isPresented: $showError) {
+            Button("OK") { }
+        } message: {
+            Text("We couldn't make the order! \(errorMessage)")
         }
     }
     
@@ -74,7 +81,8 @@ struct CheckoutView: View {
             """
             showingConfirmation = true
         } catch {
-            print("Checkout failed: \(error.localizedDescription)")
+            showError = true;
+            errorMessage = error.localizedDescription
         }
     }
 }

@@ -40,12 +40,18 @@ class Order: Codable {
     
     // .. delivery details
     var name = ""
-    var streetAddress = ""
+    var streetAddress = "" {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(streetAddress) {
+                UserDefaults.standard.set(encoded, forKey: "StreetAddress")
+            }
+        }
+    }
     var city = ""
     var zip = ""
     
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.isEmpty || streetAddress.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || city.isEmpty || zip.isEmpty {
             return false
         }
         
@@ -70,5 +76,14 @@ class Order: Codable {
         }
         
         return cost
+    }
+    
+    init() {
+        if let data = UserDefaults.standard.data(forKey: "StreetAddress") {
+            streetAddress = try! JSONDecoder().decode(String.self, from: data)
+            return
+        }
+        
+        streetAddress = ""
     }
 }
