@@ -5,17 +5,18 @@
 //  Created by ☕️ Gabo.montero on 3/17/24.
 //
 
-import SwiftData
 import SwiftUI
+import SwiftData
 
 @main
 struct BookwormApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
         // step 2. Makes SwiftData available everywhere in our app
-        .modelContainer(for: Student.self) // .. SwiftData's name for where it stores its data
+        .modelContainer(for: Book.self) // .. SwiftData's name for where it stores its data
         // .. the first time the app runs this means SwiftData has to create the underlying database file,
         // .. but in future runs it will load the database it made previously
         
