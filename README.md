@@ -38,8 +38,8 @@
 
 1. **Swift**
 
-	  - Swift Standard
-	  - Swift Foundation
+	  - ✅ Swift Standard
+	  - ✅ Swift Foundation
 	  - ✅ Protocol oriented programming **
 	  - Concurrent programming
       	- Dispatch Queque
