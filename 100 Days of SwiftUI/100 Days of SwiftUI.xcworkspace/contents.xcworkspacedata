@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Focus on data/SwiftDataProject/SwiftDataProject.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Focus on data/Bookworm/Bookworm.xcodeproj">
    </FileRef>
    <FileRef
