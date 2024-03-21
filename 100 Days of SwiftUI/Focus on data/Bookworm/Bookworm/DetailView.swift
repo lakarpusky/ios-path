@@ -39,14 +39,27 @@ struct DetailView: View {
                     .resizable()
                     .scaledToFit()
                 
-                Text(book.genre.uppercased())
-                    .font(.caption)
-                    .fontWeight(.black)
-                    .padding(8)
-                    .foregroundStyle(.white)
-                    .background(.black.opacity(0.75))
-                    .clipShape(.capsule)
-                    .offset(x: -5, y: -5)
+                HStack {
+                    Text(book.formattedDate)
+                        .font(.caption)
+                        .fontWeight(.black)
+                        .padding(4)
+                        .foregroundStyle(.white)
+                        .background(.black.opacity(0.4))
+                    
+                    Spacer()
+                    
+                    Text(book.genre.uppercased())
+                        .font(.caption)
+                        .fontWeight(.black)
+                        .padding(8)
+                        .foregroundStyle(.white)
+                        .background(.black.opacity(0.75))
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 4)
+                        )
+                        .offset(x: -5, y: -5)
+                }
             }
             .padding(.top)
         }

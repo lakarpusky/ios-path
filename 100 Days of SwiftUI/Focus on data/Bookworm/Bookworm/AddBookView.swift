@@ -8,6 +8,12 @@
 import SwiftUI
 import SwiftData
 
+extension String {
+    var trimmed: String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
 struct AddBookView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
@@ -19,6 +25,10 @@ struct AddBookView: View {
     @State private var review = ""
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    
+    var isNotValidBook: Bool {
+        title.trimmed.isEmpty || author.trimmed.isEmpty
+    }
     
     var body: some View {
         NavigationStack {
@@ -51,6 +61,7 @@ struct AddBookView: View {
                         modelContext.insert(newBook)
                         dismiss()
                     }
+                    .disabled(isNotValidBook)
                 }
             }
             .navigationTitle("Add Book")

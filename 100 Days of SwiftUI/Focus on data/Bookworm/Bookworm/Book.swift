@@ -15,6 +15,11 @@ class Book {
     var genre: String
     var review: String
     var rating: Int
+    let date = Date.now
+    
+    var formattedDate: String {
+        date.formatted(date: .complete, time: .omitted)
+    }
     
     init(title: String, author: String, genre: String, review: String, rating: Int) {
         self.title = title
