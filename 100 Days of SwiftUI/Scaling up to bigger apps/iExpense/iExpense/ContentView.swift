@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AmountStyled: View {
     let amount: Double
@@ -21,56 +22,65 @@ struct AmountStyled: View {
 }
 
 struct ContentView: View {
-    @State private var expenses = Expenses()
+    @Environment(\.modelContext) var modelContext
+    @Query(sort: \Expense.name) var expenses: [Expense]
+    
     @State private var path = [Int]()
+    @State private var expenseType = "All"
+    
+    // .. customizable sort order options
+    @State private var sortOrder = [
+        SortDescriptor(\Expense.name),
+        SortDescriptor(\Expense.amount)
+    ]
+    
+    let types = ["All", "Personal", "Business"]
     
     var body: some View {
         NavigationStack(path: $path) {
-            List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name).font(.headline)
-                            Text(item.type).foregroundStyle(.gray)
-                        }
-                        
-                        Spacer()
-                        
-                        Text(
-                            item.amount,
-                            format: .currency(
-                                code: Locale.current.currency?.identifier ?? "USD"
-                            )
-                        )
-                        .font(
-                            .headline.weight(
-                                item.amount > 100 ? .semibold : .regular
-                            )
-                        )
-                        .foregroundStyle(
-                            item.amount < 10 ? .green : item.amount < 100 ? .blue : .red
-                        )
-                    }
-                }
-                .onDelete(perform: removeItems)
-            }
+            ExpensesView(
+                expenseType: expenseType,
+                sortOrder: sortOrder
+            )
             .navigationTitle("iExpense")
             .navigationDestination(for: Int.self) { _ in
-                AddView(expenses: expenses)
+                AddView()
             }
             .toolbar {
+                Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                    // .. to adjust the sort descriptors array dynamically
+                    Picker("Sort", selection: $sortOrder) {
+                        Text("Sort by Name")
+                            .tag([
+                                SortDescriptor(\Expense.name),
+                                SortDescriptor(\Expense.amount)
+                            ])
+                        Text("Sort by Amount")
+                            .tag([
+                                SortDescriptor(\Expense.amount),
+                                SortDescriptor(\Expense.name)
+                            ])
+                    }
+                }
+                
+                Menu("Filter", systemImage: "line.3.horizontal.decrease.circle") {
+                    // .. to adjust the custom filter dynamically
+                    Picker("Filter", selection: $expenseType) {
+                        ForEach(types, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                }
+                
                 Button("Add Expense", systemImage: "plus") {
-                    path.append(1)
+                    path = [1]
                 }
             }
         }
-    }
-    
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: Expense.self, inMemory: true)
 }

@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AddView: View {
+    @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var name = "Add new expense"
     @State private var type = "Personal"
     @State private var amount = 0.0
     
-    @Environment(\.dismiss) private var dismiss
-    
-    var expenses: Expenses
-    let types = ["Bsiness", "Personal"]
+    let types = ["Business", "Personal"]
     
     var body: some View {
         Form {
@@ -39,20 +40,21 @@ struct AddView: View {
         .navigationBarBackButtonHidden()
         .toolbar {
             Button("Save") {
-                let item = ExpenseItem(name: name, type: type, amount: amount)
-                expenses.items.append(item)
-                    dismiss()
+                let item = Expense(name: name, type: type, amount: amount)
+                modelContext.insert(item)
+                dismiss()
             }
         }
         
         Button("Cancel") {
-                dismiss()
+            dismiss()
         }
     }
 }
 
 #Preview {
     NavigationStack {
-        AddView(expenses: Expenses())
+        AddView()
+            .modelContainer(for: Expense.self, inMemory: true)
     }
 }

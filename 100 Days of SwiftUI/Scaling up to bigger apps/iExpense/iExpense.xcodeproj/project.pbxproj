@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B04D237D2BAF90D500DA29D9 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D237C2BAF90D500DA29D9 /* ExpensesView.swift */; };
 		B0ED384B2B9A677D00076395 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED384A2B9A677D00076395 /* iExpenseApp.swift */; };
 		B0ED384D2B9A677D00076395 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED384C2B9A677D00076395 /* ContentView.swift */; };
 		B0ED384F2B9A677E00076395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0ED384E2B9A677E00076395 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B04D237C2BAF90D500DA29D9 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		B0ED38472B9A677D00076395 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED384A2B9A677D00076395 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		B0ED384C2B9A677D00076395 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,16 +71,17 @@
 			children = (
 				B0ED384A2B9A677D00076395 /* iExpenseApp.swift */,
 				B0ED384C2B9A677D00076395 /* ContentView.swift */,
+				B0ED386A2B9ABDFA00076395 /* AddView.swift */,
+				B0ED38662B9AB88A00076395 /* ExpenseItem.swift */,
+				B04D237C2BAF90D500DA29D9 /* ExpensesView.swift */,
+				B0ED384E2B9A677E00076395 /* Assets.xcassets */,
+				B0ED38502B9A677E00076395 /* Preview Content */,
 				B0ED38582B9A769900076395 /* StoringUserSettingsUserDefaults.swift */,
 				B0ED385A2B9A79E700076395 /* ArchivingObjectsWithCodable.swift */,
 				B0ED385C2B9A7B9B00076395 /* DeletingItemsOnDelete.swift */,
 				B0ED385E2B9A7C6E00076395 /* ShowHideViews.swift */,
 				B0ED38602B9A7CC800076395 /* UsingStateWithClasses.swift */,
 				B0ED38622B9AB44D00076395 /* SharingStateWithObservable.swift */,
-				B0ED386A2B9ABDFA00076395 /* AddView.swift */,
-				B0ED38662B9AB88A00076395 /* ExpenseItem.swift */,
-				B0ED384E2B9A677E00076395 /* Assets.xcassets */,
-				B0ED38502B9A677E00076395 /* Preview Content */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				B0ED385D2B9A7B9B00076395 /* DeletingItemsOnDelete.swift in Sources */,
 				B0ED38672B9AB88A00076395 /* ExpenseItem.swift in Sources */,
 				B0ED38612B9A7CC800076395 /* UsingStateWithClasses.swift in Sources */,
+				B04D237D2BAF90D500DA29D9 /* ExpensesView.swift in Sources */,
 				B0ED385B2B9A79E700076395 /* ArchivingObjectsWithCodable.swift in Sources */,
 				B0ED38592B9A769900076395 /* StoringUserSettingsUserDefaults.swift in Sources */,
 				B0ED384B2B9A677D00076395 /* iExpenseApp.swift in Sources */,
