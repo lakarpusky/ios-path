@@ -13,6 +13,7 @@
 		B04D23702BABF49E00DA29D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04D236F2BABF49E00DA29D9 /* Preview Assets.xcassets */; };
 		B04D23772BABF6AF00DA29D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D23762BABF6AF00DA29D9 /* User.swift */; };
 		B04D23792BABF71C00DA29D9 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D23782BABF71C00DA29D9 /* EditUserView.swift */; };
+		B04D237B2BAE932A00DA29D9 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D237A2BAE932A00DA29D9 /* UsersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B04D236F2BABF49E00DA29D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B04D23762BABF6AF00DA29D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B04D23782BABF71C00DA29D9 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
+		B04D237A2BAE932A00DA29D9 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B04D236E2BABF49E00DA29D9 /* Preview Content */,
 				B04D23762BABF6AF00DA29D9 /* User.swift */,
 				B04D23782BABF71C00DA29D9 /* EditUserView.swift */,
+				B04D237A2BAE932A00DA29D9 /* UsersView.swift */,
 			);
 			path = SwiftDataProject;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04D237B2BAE932A00DA29D9 /* UsersView.swift in Sources */,
 				B04D236B2BABF49D00DA29D9 /* ContentView.swift in Sources */,
 				B04D23792BABF71C00DA29D9 /* EditUserView.swift in Sources */,
 				B04D23692BABF49D00DA29D9 /* SwiftDataProjectApp.swift in Sources */,
