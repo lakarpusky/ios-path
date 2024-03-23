@@ -4,8 +4,8 @@
 ## 📚 ₋ **The basics**
 ---
 
-- **XCode IDE**
-- **Swift**
+- **✅ XCode IDE**
+- **✅ Swift**
 
 ---
 ## ✍️ ₋ **Common topics**
@@ -17,7 +17,7 @@
 	  - App architect
 	  - App life-cycle
 	  - VVC programming
-		  - AutoLayout
+ 		- AutoLayout
 	  - Multi touch event handling
 
 3. **Cocoa Design Patterns**
@@ -38,9 +38,9 @@
 
 1. **Swift**
 
-	  - Swift Standard
-	  - Swift Foundation
-	  - Protocol oriented programming **
+	  - ✅ Swift Standard
+	  - ✅ Swift Foundation
+	  - ✅ Protocol oriented programming **
 	  - Concurrent programming
       	- Dispatch Queque
     - Advanced design pattern **
@@ -57,6 +57,7 @@
 3. **Data Persistence**
 
     - Core data
+    - ✅ Swift data
     - Serialize
     	- JSON
     	- PList
