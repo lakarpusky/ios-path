@@ -14,6 +14,8 @@
 		B0F091372BB28C3500E5F50F /* HowPropertyWrappersBecomeStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F091362BB28C3500E5F50F /* HowPropertyWrappersBecomeStructs.swift */; };
 		B0F091392BB3001600E5F50F /* RespondingToStateChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F091382BB3001600E5F50F /* RespondingToStateChanges.swift */; };
 		B0F0913B2BB301FA00E5F50F /* ShowingMultipleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0913A2BB301FA00E5F50F /* ShowingMultipleOptions.swift */; };
+		B0F0913D2BB3054800E5F50F /* IntegratingCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0913C2BB3054800E5F50F /* IntegratingCoreImage.swift */; };
+		B0F0913F2BB395D800E5F50F /* ShowingContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0913E2BB395D800E5F50F /* ShowingContentUnavailableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		B0F091362BB28C3500E5F50F /* HowPropertyWrappersBecomeStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowPropertyWrappersBecomeStructs.swift; sourceTree = "<group>"; };
 		B0F091382BB3001600E5F50F /* RespondingToStateChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespondingToStateChanges.swift; sourceTree = "<group>"; };
 		B0F0913A2BB301FA00E5F50F /* ShowingMultipleOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingMultipleOptions.swift; sourceTree = "<group>"; };
+		B0F0913C2BB3054800E5F50F /* IntegratingCoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingCoreImage.swift; sourceTree = "<group>"; };
+		B0F0913E2BB395D800E5F50F /* ShowingContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingContentUnavailableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				B0F091362BB28C3500E5F50F /* HowPropertyWrappersBecomeStructs.swift */,
 				B0F091382BB3001600E5F50F /* RespondingToStateChanges.swift */,
 				B0F0913A2BB301FA00E5F50F /* ShowingMultipleOptions.swift */,
+				B0F0913C2BB3054800E5F50F /* IntegratingCoreImage.swift */,
+				B0F0913E2BB395D800E5F50F /* ShowingContentUnavailableView.swift */,
 			);
 			path = Instafilter;
 			sourceTree = "<group>";
@@ -149,8 +155,10 @@
 				B0F0913B2BB301FA00E5F50F /* ShowingMultipleOptions.swift in Sources */,
 				B0F0912B2BB28BBC00E5F50F /* ContentView.swift in Sources */,
 				B0F091292BB28BBC00E5F50F /* InstafilterApp.swift in Sources */,
+				B0F0913F2BB395D800E5F50F /* ShowingContentUnavailableView.swift in Sources */,
 				B0F091372BB28C3500E5F50F /* HowPropertyWrappersBecomeStructs.swift in Sources */,
 				B0F091392BB3001600E5F50F /* RespondingToStateChanges.swift in Sources */,
+				B0F0913D2BB3054800E5F50F /* IntegratingCoreImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
