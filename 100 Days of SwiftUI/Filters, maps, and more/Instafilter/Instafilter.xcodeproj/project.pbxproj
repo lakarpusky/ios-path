@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B060CE772BB4D0BB006A01BD /* ShareContentWithShareLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE762BB4D0BB006A01BD /* ShareContentWithShareLink.swift */; };
+		B060CE792BB4D4E3006A01BD /* AskToLeaveAppStoreReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE782BB4D4E3006A01BD /* AskToLeaveAppStoreReview.swift */; };
 		B0F091292BB28BBC00E5F50F /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F091282BB28BBC00E5F50F /* InstafilterApp.swift */; };
 		B0F0912B2BB28BBC00E5F50F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0912A2BB28BBC00E5F50F /* ContentView.swift */; };
 		B0F0912D2BB28BBD00E5F50F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F0912C2BB28BBD00E5F50F /* Assets.xcassets */; };
@@ -16,9 +18,12 @@
 		B0F0913B2BB301FA00E5F50F /* ShowingMultipleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0913A2BB301FA00E5F50F /* ShowingMultipleOptions.swift */; };
 		B0F0913D2BB3054800E5F50F /* IntegratingCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0913C2BB3054800E5F50F /* IntegratingCoreImage.swift */; };
 		B0F0913F2BB395D800E5F50F /* ShowingContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0913E2BB395D800E5F50F /* ShowingContentUnavailableView.swift */; };
+		B0F091412BB3DD6D00E5F50F /* LoadingPhotosUserPhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F091402BB3DD6D00E5F50F /* LoadingPhotosUserPhotoLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B060CE762BB4D0BB006A01BD /* ShareContentWithShareLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareContentWithShareLink.swift; sourceTree = "<group>"; };
+		B060CE782BB4D4E3006A01BD /* AskToLeaveAppStoreReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskToLeaveAppStoreReview.swift; sourceTree = "<group>"; };
 		B0F091252BB28BBC00E5F50F /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F091282BB28BBC00E5F50F /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
 		B0F0912A2BB28BBC00E5F50F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +34,7 @@
 		B0F0913A2BB301FA00E5F50F /* ShowingMultipleOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingMultipleOptions.swift; sourceTree = "<group>"; };
 		B0F0913C2BB3054800E5F50F /* IntegratingCoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingCoreImage.swift; sourceTree = "<group>"; };
 		B0F0913E2BB395D800E5F50F /* ShowingContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingContentUnavailableView.swift; sourceTree = "<group>"; };
+		B0F091402BB3DD6D00E5F50F /* LoadingPhotosUserPhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPhotosUserPhotoLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 				B0F0913A2BB301FA00E5F50F /* ShowingMultipleOptions.swift */,
 				B0F0913C2BB3054800E5F50F /* IntegratingCoreImage.swift */,
 				B0F0913E2BB395D800E5F50F /* ShowingContentUnavailableView.swift */,
+				B0F091402BB3DD6D00E5F50F /* LoadingPhotosUserPhotoLibrary.swift */,
+				B060CE762BB4D0BB006A01BD /* ShareContentWithShareLink.swift */,
+				B060CE782BB4D4E3006A01BD /* AskToLeaveAppStoreReview.swift */,
 			);
 			path = Instafilter;
 			sourceTree = "<group>";
@@ -153,12 +162,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0F0913B2BB301FA00E5F50F /* ShowingMultipleOptions.swift in Sources */,
+				B060CE772BB4D0BB006A01BD /* ShareContentWithShareLink.swift in Sources */,
 				B0F0912B2BB28BBC00E5F50F /* ContentView.swift in Sources */,
 				B0F091292BB28BBC00E5F50F /* InstafilterApp.swift in Sources */,
 				B0F0913F2BB395D800E5F50F /* ShowingContentUnavailableView.swift in Sources */,
 				B0F091372BB28C3500E5F50F /* HowPropertyWrappersBecomeStructs.swift in Sources */,
+				B060CE792BB4D4E3006A01BD /* AskToLeaveAppStoreReview.swift in Sources */,
 				B0F091392BB3001600E5F50F /* RespondingToStateChanges.swift in Sources */,
 				B0F0913D2BB3054800E5F50F /* IntegratingCoreImage.swift in Sources */,
+				B0F091412BB3DD6D00E5F50F /* LoadingPhotosUserPhotoLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
