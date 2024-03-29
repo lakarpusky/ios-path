@@ -9,16 +9,22 @@ import SwiftUI
 import PhotosUI // .1. step
 import CoreImage
 import CoreImage.CIFilterBuiltins
+import StoreKit
 
 struct ContentView: View {
+    @AppStorage("filterCount") var filterCount = 0
+    @Environment(\.requestReview) var requestReview
+    
     @State private var processedImage: Image?
     @State private var filterIntensity = 0.5
+    @State private var showingFilters = false
+    @State private var beginImage: CIImage?
     
     // .. to track whatever picture the user selected
     @State private var selectedItem: PhotosPickerItem? // .2. step
     
     // .. we'll make it flexible later so it can be changed
-    @State private var ciFilter = CIFilter.sepiaTone() // .. as our default filter
+    @State private var ciFilter: CIFilter = CIFilter.sepiaTone() // .. as our default filter
     
     // .. to render many images it's a good idea
     let ciContext = CIContext() // .. to create a context once and keep it alive
@@ -62,16 +68,42 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    //
+                    if let processedImage {
+                        ShareLink(
+                            item: processedImage,
+                            preview: SharePreview("Instafilter image", image: processedImage)
+                        )
+                    }
                 }
             }
             .padding([.horizontal, .bottom])
             .navigationTitle("Instafiller")
+            .confirmationDialog("Select a filter", isPresented: $showingFilters) {
+                Button("Crystalize") { setFilter(CIFilter.crystallize()) }
+                Button("Edges") { setFilter(CIFilter.edges()) }
+                Button("Gaussian Blur") { setFilter(CIFilter.gaussianBlur()) }
+                Button("Pixellate") { setFilter(CIFilter.pixellate()) }
+                Button("Sepia Tone") { setFilter(CIFilter.sepiaTone()) }
+                Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask()) }
+                Button("Vignette") { setFilter(CIFilter.vignette()) }
+                Button("Cancel", role: .cancel) { }
+            }
         }
     }
     
     func changeFilter() {
+        showingFilters = true
+    }
+    
+    @MainActor func setFilter(_ filter: CIFilter) {
+        ciFilter = filter
+        loadImage()
         
+        filterCount += 1
+        
+        if filterCount >= 5 {
+            requestReview()
+        }
     }
     
     func loadImage() {
@@ -86,7 +118,7 @@ struct ContentView: View {
             guard let inputImage = UIImage(data: imageData) else { return }
             
             // .. it's more safer to use the filter's (setValue) over dedicated (inputImage) property
-            let beginImage = CIImage(image: inputImage)
+            beginImage = CIImage(image: inputImage)!
             ciFilter.setValue(beginImage, forKey: kCIInputImageKey)
             
             applyProcessing()
@@ -94,8 +126,20 @@ struct ContentView: View {
     }
     
     func applyProcessing() {
-        // .. it will set our sepia filter's intensity based on the value
-        ciFilter.intensity = Float(filterIntensity)
+        // .. it will set our filter key based on the value
+        let inputKeys = ciFilter.inputKeys
+        
+        if inputKeys.contains(kCIInputIntensityKey) { 
+            ciFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
+        }
+        
+        if inputKeys.contains(kCIInputRadiusKey) { 
+            ciFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey)
+        }
+        
+        if inputKeys.contains(kCIInputScaleKey) { 
+            ciFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey)
+        }
         
         // .. read the output image back from the filter...
         guard let outputImage = ciFilter.outputImage else { return }
