@@ -56,15 +56,19 @@ struct ContentView: View {
                 
                 HStack {
                     Text("Intensity")
+                        .foregroundStyle(processedImage == nil ? .secondary : .primary)
+                    
                     Slider(value: $filterIntensity)
                         // .. to watch for value changes
                         .onChange(of: filterIntensity, applyProcessing)
+                        .disabled(processedImage == nil)
                         
                 }
                 .padding(.vertical)
                 
                 HStack {
                     Button("Change Filter", action: changeFilter)
+                        .disabled(processedImage == nil)
                     
                     Spacer()
                     
@@ -115,7 +119,9 @@ struct ContentView: View {
             }
             
             // ...and convert that to a (UIImage)
-            guard let inputImage = UIImage(data: imageData) else { return }
+            guard let inputImage = UIImage(data: imageData) else { 
+                return
+            }
             
             // .. it's more safer to use the filter's (setValue) over dedicated (inputImage) property
             beginImage = CIImage(image: inputImage)!
