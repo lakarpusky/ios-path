@@ -14,6 +14,8 @@
 		B060CE952BB8B622006A01BD /* ConformanceComparableCustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE942BB8B622006A01BD /* ConformanceComparableCustomTypes.swift */; };
 		B060CE972BB8BAED006A01BD /* WritingToDocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE962BB8BAED006A01BD /* WritingToDocumentsDirectory.swift */; };
 		B060CE992BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE982BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift */; };
+		B060CE9B2BB9D7B2006A01BD /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE9A2BB9D7B2006A01BD /* IntegratingMapKit.swift */; };
+		B060CE9D2BB9F313006A01BD /* UsingTouchFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE9C2BB9F313006A01BD /* UsingTouchFaceID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		B060CE942BB8B622006A01BD /* ConformanceComparableCustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceComparableCustomTypes.swift; sourceTree = "<group>"; };
 		B060CE962BB8BAED006A01BD /* WritingToDocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingToDocumentsDirectory.swift; sourceTree = "<group>"; };
 		B060CE982BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingViewStatesWithEnums.swift; sourceTree = "<group>"; };
+		B060CE9A2BB9D7B2006A01BD /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
+		B060CE9C2BB9F313006A01BD /* UsingTouchFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTouchFaceID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				B060CE942BB8B622006A01BD /* ConformanceComparableCustomTypes.swift */,
 				B060CE982BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift */,
 				B060CE962BB8BAED006A01BD /* WritingToDocumentsDirectory.swift */,
+				B060CE9A2BB9D7B2006A01BD /* IntegratingMapKit.swift */,
+				B060CE9C2BB9F313006A01BD /* UsingTouchFaceID.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -146,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B060CE9D2BB9F313006A01BD /* UsingTouchFaceID.swift in Sources */,
 				B060CE952BB8B622006A01BD /* ConformanceComparableCustomTypes.swift in Sources */,
 				B060CE892BB8B5D9006A01BD /* ContentView.swift in Sources */,
+				B060CE9B2BB9D7B2006A01BD /* IntegratingMapKit.swift in Sources */,
 				B060CE972BB8BAED006A01BD /* WritingToDocumentsDirectory.swift in Sources */,
 				B060CE992BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift in Sources */,
 				B060CE872BB8B5D9006A01BD /* BucketListApp.swift in Sources */,
@@ -287,6 +295,7 @@
 				DEVELOPMENT_TEAM = R49ZM6U25N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "\"We need to unlock your data.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +325,7 @@
 				DEVELOPMENT_TEAM = R49ZM6U25N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "\"We need to unlock your data.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
