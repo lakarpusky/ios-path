@@ -16,6 +16,8 @@
 		B060CE992BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE982BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift */; };
 		B060CE9B2BB9D7B2006A01BD /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE9A2BB9D7B2006A01BD /* IntegratingMapKit.swift */; };
 		B060CE9D2BB9F313006A01BD /* UsingTouchFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE9C2BB9F313006A01BD /* UsingTouchFaceID.swift */; };
+		B060CE9F2BBBD183006A01BD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CE9E2BBBD183006A01BD /* Location.swift */; };
+		B060CEA12BBBD74B006A01BD /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CEA02BBBD74B006A01BD /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		B060CE982BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingViewStatesWithEnums.swift; sourceTree = "<group>"; };
 		B060CE9A2BB9D7B2006A01BD /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
 		B060CE9C2BB9F313006A01BD /* UsingTouchFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTouchFaceID.swift; sourceTree = "<group>"; };
+		B060CE9E2BBBD183006A01BD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B060CEA02BBBD74B006A01BD /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 			children = (
 				B060CE862BB8B5D9006A01BD /* BucketListApp.swift */,
 				B060CE882BB8B5D9006A01BD /* ContentView.swift */,
+				B060CEA02BBBD74B006A01BD /* EditView.swift */,
+				B060CE9E2BBBD183006A01BD /* Location.swift */,
 				B060CE8A2BB8B5DA006A01BD /* Assets.xcassets */,
 				B060CE8C2BB8B5DA006A01BD /* Preview Content */,
 				B060CE942BB8B622006A01BD /* ConformanceComparableCustomTypes.swift */,
@@ -154,8 +160,10 @@
 			files = (
 				B060CE9D2BB9F313006A01BD /* UsingTouchFaceID.swift in Sources */,
 				B060CE952BB8B622006A01BD /* ConformanceComparableCustomTypes.swift in Sources */,
+				B060CE9F2BBBD183006A01BD /* Location.swift in Sources */,
 				B060CE892BB8B5D9006A01BD /* ContentView.swift in Sources */,
 				B060CE9B2BB9D7B2006A01BD /* IntegratingMapKit.swift in Sources */,
+				B060CEA12BBBD74B006A01BD /* EditView.swift in Sources */,
 				B060CE972BB8BAED006A01BD /* WritingToDocumentsDirectory.swift in Sources */,
 				B060CE992BB8BEC6006A01BD /* SwitchingViewStatesWithEnums.swift in Sources */,
 				B060CE872BB8B5D9006A01BD /* BucketListApp.swift in Sources */,

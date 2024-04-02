@@ -82,7 +82,7 @@ struct MapCameraPositionView: View {
 }
 
 // .2. Placing annotations
-struct Location: Identifiable {
+struct Location1: Identifiable {
     let id = UUID()
     var name: String
     var coordinate: CLLocationCoordinate2D
@@ -91,11 +91,11 @@ struct Location: Identifiable {
 struct MapAnnotations: View {
     // .2.a. an array of locations, wherever we want map annotations to appear
     let locations = [
-        Location(
+        Location1(
             name: "Buckingham Palace",
             coordinate: CLLocationCoordinate2D(latitude: 51.501, longitude: -0.141)
         ),
-        Location(
+        Location1(
             name: "Tower of London",
             coordinate: CLLocationCoordinate2D(latitude: 51.508, longitude: -0.076)
         )
