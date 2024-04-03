@@ -8,7 +8,7 @@
 import SwiftUI
 
 // .1. step: an enum for the varios view states you want to represent
-enum LoadingState {
+enum LoadingState1 {
     case loading, success, failed
 }
 
@@ -32,7 +32,7 @@ struct FailedView: View {
 }
 
 struct SwitchingViewStatesWithEnums: View {
-    @State private var loadingState = LoadingState.loading
+    @State private var loadingState = LoadingState1.loading
     
     var body: some View {
         switch loadingState {
