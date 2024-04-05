@@ -40,6 +40,11 @@ extension ContentView {
         // add the Face ID permission request key to our project configuration options,
         // explaining the user why we want to use Face ID.
         
+        
+        var alertTitle = ""
+        var alertMessage = ""
+        var showingAlert = false
+        
         // .6.a. step
         // a new initializer and...
         init() {
@@ -81,7 +86,9 @@ extension ContentView {
                 let data = try JSONEncoder().encode(locations)
                 try data.write(to: savePath, options: [.atomic, .completeFileProtection])
             } catch {
-                print("Unable to save data.")
+                alertTitle = "Save Data Error"
+                alertMessage = "Unable to save data: \(error.localizedDescription)"
+                showingAlert = true
             }
         }
         
@@ -101,12 +108,24 @@ extension ContentView {
                     if success {
                         self.isUnlocked = true
                     } else {
-                        // error
+                        self.alertTitle = "Biometric Authentication Error"
+                        self.alertMessage = authenticationError?.localizedDescription ?? "Oops!. Something went wrong, please try again."
+                        self.showingAlert = true
                     }
                 }
             } else {
-                // no biometrics
+                self.alertTitle = "Support Error"
+                self.alertMessage = error?.localizedDescription ?? "Biometric authentication not supported!"
+                self.showingAlert = true
             }
         }
+    }
+}
+
+
+extension EditView {
+    @Observable
+    class ViewModel {
+        //
     }
 }
