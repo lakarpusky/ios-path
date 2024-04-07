@@ -63,13 +63,13 @@
 			children = (
 				B067D9F32B8A984F002260D8 /* GuessTheFlagApp.swift */,
 				B067D9F52B8A984F002260D8 /* ContentView.swift */,
-				B067DA012B8A98BE002260D8 /* UsingStacks.swift */,
-				B067DA032B8A9D83002260D8 /* ColorsAndFrames.swift */,
-				B067DA052B8AA152002260D8 /* Gradients.swift */,
-				B067DA072B8AA6D4002260D8 /* ButtonsImages.swift */,
-				B067DA092B8AAAB9002260D8 /* AlertMessages.swift */,
 				B067D9F72B8A9850002260D8 /* Assets.xcassets */,
 				B067D9F92B8A9850002260D8 /* Preview Content */,
+				B067DA092B8AAAB9002260D8 /* AlertMessages.swift */,
+				B067DA072B8AA6D4002260D8 /* ButtonsImages.swift */,
+				B067DA052B8AA152002260D8 /* Gradients.swift */,
+				B067DA032B8A9D83002260D8 /* ColorsAndFrames.swift */,
+				B067DA012B8A98BE002260D8 /* UsingStacks.swift */,
 			);
 			path = GuessTheFlag;
 			sourceTree = "<group>";
