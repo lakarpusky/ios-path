@@ -30,6 +30,12 @@ struct ContentView: View {
                             Image(systemName: "\(word.count).circle")
                             Text(word)
                         }
+                        // .. we can apply our (VoiceOver)
+                        .accessibilityElement()
+                        .accessibilityLabel("\(word), \(word.count) letters")
+                        // .. or, you could break that text up to have a hint as well as a label:
+                        .accessibilityLabel(word)
+                        .accessibilityHint("\(word.count) letters")
                     }
                 }
             }
