@@ -17,9 +17,6 @@
       location = "group:Focus on data/Bookworm/Bookworm.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Focus on data/CupcakeCorner/CupcakeCorner.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Scaling up to bigger apps/HabitTracking/HabitTracking.xcodeproj">
    </FileRef>
    <FileRef
