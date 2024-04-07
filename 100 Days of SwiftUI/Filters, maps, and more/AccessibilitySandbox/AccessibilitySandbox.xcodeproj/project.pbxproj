@@ -14,6 +14,7 @@
 		B060CEC12BBFCEB5006A01BD /* IdentifyingWithUsefulLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CEC02BBFCEB5006A01BD /* IdentifyingWithUsefulLabels.swift */; };
 		B060CEC32BC0ABC5006A01BD /* HidingAndGroupuingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CEC22BC0ABC5006A01BD /* HidingAndGroupuingData.swift */; };
 		B060CEC52BC0B0D3006A01BD /* ReadingValueControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CEC42BC0B0D3006A01BD /* ReadingValueControls.swift */; };
+		B060CEC72BC3477C006A01BD /* HandlingVoiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CEC62BC3477C006A01BD /* HandlingVoiceInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B060CEC02BBFCEB5006A01BD /* IdentifyingWithUsefulLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyingWithUsefulLabels.swift; sourceTree = "<group>"; };
 		B060CEC22BC0ABC5006A01BD /* HidingAndGroupuingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidingAndGroupuingData.swift; sourceTree = "<group>"; };
 		B060CEC42BC0B0D3006A01BD /* ReadingValueControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingValueControls.swift; sourceTree = "<group>"; };
+		B060CEC62BC3477C006A01BD /* HandlingVoiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlingVoiceInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				B060CEC02BBFCEB5006A01BD /* IdentifyingWithUsefulLabels.swift */,
 				B060CEC22BC0ABC5006A01BD /* HidingAndGroupuingData.swift */,
 				B060CEC42BC0B0D3006A01BD /* ReadingValueControls.swift */,
+				B060CEC62BC3477C006A01BD /* HandlingVoiceInput.swift */,
 			);
 			path = AccessibilitySandbox;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				B060CEB52BBFCDEE006A01BD /* ContentView.swift in Sources */,
 				B060CEC52BC0B0D3006A01BD /* ReadingValueControls.swift in Sources */,
 				B060CEB32BBFCDEE006A01BD /* AccessibilitySandboxApp.swift in Sources */,
+				B060CEC72BC3477C006A01BD /* HandlingVoiceInput.swift in Sources */,
 				B060CEC32BC0ABC5006A01BD /* HidingAndGroupuingData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
