@@ -37,10 +37,12 @@ struct MissionView: View {
                         width * 0.6
                     }
                     .padding(.top)
+                    .accessibilityLabel("\(mission.image) mission")
                 
                 Text(mission.formattedMissionLaunchDate)
                     .foregroundStyle(.white.opacity(0.7))
                     .padding(.top)
+                    .accessibilityLabel("Mission launch date \(mission.formattedMissionLaunchDate)")
                 
                 VStack(alignment: .leading) {
                     HDivider(height: 2)
@@ -62,6 +64,10 @@ struct MissionView: View {
                     .padding(.top)
                 }
                 .padding(.horizontal)
+                .accessibilityElement()
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Mission highlights")
+                .accessibilityValue(mission.description)
             }
             .padding(.bottom)
             

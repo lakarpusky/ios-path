@@ -49,6 +49,10 @@ struct ExpensesView: View {
                         item.amount < 10 ? .green : item.amount < 100 ? .blue : .red
                     )
                 }
+                .accessibilityElement()
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("\(item.name) priced at \(item.amount) USD")
+                .accessibilityHint("\(item.type) expense")
             }
             .onDelete(perform: removeExpenses)
         }
