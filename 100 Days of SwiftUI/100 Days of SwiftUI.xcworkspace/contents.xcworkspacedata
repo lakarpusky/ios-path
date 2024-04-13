@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Filters, maps, and more/ConsolidationVI/ConsolidationVI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Focus on data/CupcakeCorner/CupcakeCorner.xcodeproj">
    </FileRef>
    <FileRef
