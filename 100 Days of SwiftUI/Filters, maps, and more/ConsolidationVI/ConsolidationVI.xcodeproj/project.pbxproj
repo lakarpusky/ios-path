@@ -15,6 +15,8 @@
 		B060CF112BC8FEA7006A01BD /* CustomPropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CF102BC8FEA7006A01BD /* CustomPropertyWrappers.swift */; };
 		B060CF132BCA40DC006A01BD /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CF122BCA40DC006A01BD /* ImageDetailView.swift */; };
 		B060CF152BCA4100006A01BD /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CF142BCA4100006A01BD /* ImageItem.swift */; };
+		B0C475F12BCB3D99004E94C0 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C475F02BCB3D99004E94C0 /* UserLocation.swift */; };
+		B0C475F32BCB4434004E94C0 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C475F22BCB4434004E94C0 /* LocationMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		B060CF102BC8FEA7006A01BD /* CustomPropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPropertyWrappers.swift; sourceTree = "<group>"; };
 		B060CF122BCA40DC006A01BD /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		B060CF142BCA4100006A01BD /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		B0C475F02BCB3D99004E94C0 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		B0C475F22BCB4434004E94C0 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 				B060CEFE2BC8ECC1006A01BD /* ConsolidationVIApp.swift */,
 				B060CF002BC8ECC1006A01BD /* ContentView.swift */,
 				B060CF122BCA40DC006A01BD /* ImageDetailView.swift */,
+				B0C475F22BCB4434004E94C0 /* LocationMapView.swift */,
 				B060CF142BCA4100006A01BD /* ImageItem.swift */,
+				B0C475F02BCB3D99004E94C0 /* UserLocation.swift */,
 				B060CF022BC8ECC2006A01BD /* Assets.xcassets */,
 				B060CF042BC8ECC2006A01BD /* Preview Content */,
 				B060CF0E2BC8F610006A01BD /* OperatorOverloading.swift */,
@@ -151,9 +157,11 @@
 			files = (
 				B060CF152BCA4100006A01BD /* ImageItem.swift in Sources */,
 				B060CF0F2BC8F610006A01BD /* OperatorOverloading.swift in Sources */,
+				B0C475F32BCB4434004E94C0 /* LocationMapView.swift in Sources */,
 				B060CF012BC8ECC1006A01BD /* ContentView.swift in Sources */,
 				B060CEFF2BC8ECC1006A01BD /* ConsolidationVIApp.swift in Sources */,
 				B060CF112BC8FEA7006A01BD /* CustomPropertyWrappers.swift in Sources */,
+				B0C475F12BCB3D99004E94C0 /* UserLocation.swift in Sources */,
 				B060CF132BCA40DC006A01BD /* ImageDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +299,7 @@
 				DEVELOPMENT_TEAM = R49ZM6U25N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wee need your location to show you where you were when a picture was added.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +329,7 @@
 				DEVELOPMENT_TEAM = R49ZM6U25N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wee need your location to show you where you were when a picture was added.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

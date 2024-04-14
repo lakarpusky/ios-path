@@ -11,6 +11,8 @@ import PhotosUI
 struct ContentView: View {
     @State private var selectedPhoto: PhotosPickerItem?
     @State private var seledtedImages: [ImageItem] = []
+    
+    @State private var showUserLocation = false
     @State private var showNameAlert = false
     @State private var photoName = ""
     
@@ -41,6 +43,21 @@ struct ContentView: View {
                                     Text(item.longDate)
                                         .font(.caption2.weight(.bold))
                                         .foregroundStyle(.white)
+                                }
+                                .padding()
+                                
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        Button(action: { showUserLocation = true }) {
+                                            Image(systemName: "info.bubble.fill")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 25, height: 25)
+                                                .foregroundStyle(.white)
+                                        }
+                                    }
+                                    Spacer()
                                 }
                                 .padding()
                             }
@@ -74,7 +91,12 @@ struct ContentView: View {
             }
             .alert("Name Photo", isPresented: $showNameAlert) {
                 TextField("Write something...", text: $photoName)
-                Button("Cancel", role: .cancel) { }
+                
+                Button("Cancel", role: .cancel) {
+                    selectedPhoto = nil
+                    photoName = ""
+                }
+                
                 Button("Save") {
                     // load an image instance from the picker provider
                     Task {
@@ -88,6 +110,9 @@ struct ContentView: View {
                 }
             } message: {
                 Text("Please enter a name for the photo.")
+            }
+            .sheet(isPresented: $showUserLocation) {
+                LocationMapView()
             }
         }
     }
