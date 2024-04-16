@@ -13,6 +13,9 @@
 		B0C476082BCC8459004E94C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C476072BCC8459004E94C0 /* Preview Assets.xcassets */; };
 		B0C4760F2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4760E2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift */; };
 		B0C476112BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476102BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift */; };
+		B0C476132BCE2AEE004E94C0 /* UnderstandingResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476122BCE2AEE004E94C0 /* UnderstandingResultType.swift */; };
+		B0C476152BCE37F0004E94C0 /* ControllingImageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476142BCE37F0004E94C0 /* ControllingImageInterpolation.swift */; };
+		B0C476172BCE3BA5004E94C0 /* CreatingContextMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476162BCE3BA5004E94C0 /* CreatingContextMenus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		B0C476072BCC8459004E94C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0C4760E2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettingUsersSelectItemsList.swift; sourceTree = "<group>"; };
 		B0C476102BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingTabsWithTabViewAndTabItem.swift; sourceTree = "<group>"; };
+		B0C476122BCE2AEE004E94C0 /* UnderstandingResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingResultType.swift; sourceTree = "<group>"; };
+		B0C476142BCE37F0004E94C0 /* ControllingImageInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingImageInterpolation.swift; sourceTree = "<group>"; };
+		B0C476162BCE3BA5004E94C0 /* CreatingContextMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingContextMenus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				B0C476062BCC8459004E94C0 /* Preview Content */,
 				B0C4760E2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift */,
 				B0C476102BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift */,
+				B0C476122BCE2AEE004E94C0 /* UnderstandingResultType.swift */,
+				B0C476142BCE37F0004E94C0 /* ControllingImageInterpolation.swift */,
+				B0C476162BCE3BA5004E94C0 /* CreatingContextMenus.swift */,
 			);
 			path = HotProspects;
 			sourceTree = "<group>";
@@ -143,7 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C476152BCE37F0004E94C0 /* ControllingImageInterpolation.swift in Sources */,
 				B0C476112BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift in Sources */,
+				B0C476132BCE2AEE004E94C0 /* UnderstandingResultType.swift in Sources */,
+				B0C476172BCE3BA5004E94C0 /* CreatingContextMenus.swift in Sources */,
 				B0C476032BCC8457004E94C0 /* ContentView.swift in Sources */,
 				B0C476012BCC8457004E94C0 /* HotProspectsApp.swift in Sources */,
 				B0C4760F2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift in Sources */,
