@@ -16,6 +16,10 @@
 		B0C476132BCE2AEE004E94C0 /* UnderstandingResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476122BCE2AEE004E94C0 /* UnderstandingResultType.swift */; };
 		B0C476152BCE37F0004E94C0 /* ControllingImageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476142BCE37F0004E94C0 /* ControllingImageInterpolation.swift */; };
 		B0C476172BCE3BA5004E94C0 /* CreatingContextMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476162BCE3BA5004E94C0 /* CreatingContextMenus.swift */; };
+		B0C476192BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476182BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift */; };
+		B0C4761B2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4761A2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift */; };
+		B0C4761D2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4761C2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift */; };
+		B0C476202BCFAA80004E94C0 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = B0C4761F2BCFAA80004E94C0 /* SamplePackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,9 @@
 		B0C476122BCE2AEE004E94C0 /* UnderstandingResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingResultType.swift; sourceTree = "<group>"; };
 		B0C476142BCE37F0004E94C0 /* ControllingImageInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingImageInterpolation.swift; sourceTree = "<group>"; };
 		B0C476162BCE3BA5004E94C0 /* CreatingContextMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingContextMenus.swift; sourceTree = "<group>"; };
+		B0C476182BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomRowSwipeActions.swift; sourceTree = "<group>"; };
+		B0C4761A2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingLocalNotifications.swift; sourceTree = "<group>"; };
+		B0C4761C2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingSwiftPackageDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C476202BCFAA80004E94C0 /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +78,9 @@
 				B0C476122BCE2AEE004E94C0 /* UnderstandingResultType.swift */,
 				B0C476142BCE37F0004E94C0 /* ControllingImageInterpolation.swift */,
 				B0C476162BCE3BA5004E94C0 /* CreatingContextMenus.swift */,
+				B0C476182BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift */,
+				B0C4761A2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift */,
+				B0C4761C2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift */,
 			);
 			path = HotProspects;
 			sourceTree = "<group>";
@@ -98,6 +109,9 @@
 			dependencies = (
 			);
 			name = HotProspects;
+			packageProductDependencies = (
+				B0C4761F2BCFAA80004E94C0 /* SamplePackage */,
+			);
 			productName = HotProspects;
 			productReference = B0C475FD2BCC8457004E94C0 /* HotProspects.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +140,9 @@
 				Base,
 			);
 			mainGroup = B0C475F42BCC8457004E94C0;
+			packageReferences = (
+				B0C4761E2BCFAA80004E94C0 /* XCRemoteSwiftPackageReference "SamplePackage" */,
+			);
 			productRefGroup = B0C475FE2BCC8457004E94C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,8 +171,11 @@
 			files = (
 				B0C476152BCE37F0004E94C0 /* ControllingImageInterpolation.swift in Sources */,
 				B0C476112BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift in Sources */,
+				B0C476192BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift in Sources */,
 				B0C476132BCE2AEE004E94C0 /* UnderstandingResultType.swift in Sources */,
+				B0C4761D2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift in Sources */,
 				B0C476172BCE3BA5004E94C0 /* CreatingContextMenus.swift in Sources */,
+				B0C4761B2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift in Sources */,
 				B0C476032BCC8457004E94C0 /* ContentView.swift in Sources */,
 				B0C476012BCC8457004E94C0 /* HotProspectsApp.swift in Sources */,
 				B0C4760F2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift in Sources */,
@@ -364,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0C4761E2BCFAA80004E94C0 /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0C4761F2BCFAA80004E94C0 /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0C4761E2BCFAA80004E94C0 /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B0C475F52BCC8457004E94C0 /* Project object */;
 }
