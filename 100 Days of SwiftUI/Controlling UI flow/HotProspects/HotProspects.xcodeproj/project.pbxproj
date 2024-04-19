@@ -20,6 +20,9 @@
 		B0C4761B2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4761A2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift */; };
 		B0C4761D2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4761C2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift */; };
 		B0C476202BCFAA80004E94C0 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = B0C4761F2BCFAA80004E94C0 /* SamplePackage */; };
+		B0C476222BD22331004E94C0 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476212BD22331004E94C0 /* ProspectsView.swift */; };
+		B0C476242BD2234A004E94C0 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476232BD2234A004E94C0 /* MeView.swift */; };
+		B0C476262BD2262D004E94C0 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476252BD2262D004E94C0 /* Prospect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		B0C476182BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomRowSwipeActions.swift; sourceTree = "<group>"; };
 		B0C4761A2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingLocalNotifications.swift; sourceTree = "<group>"; };
 		B0C4761C2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingSwiftPackageDependencies.swift; sourceTree = "<group>"; };
+		B0C476212BD22331004E94C0 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		B0C476232BD2234A004E94C0 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		B0C476252BD2262D004E94C0 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 			children = (
 				B0C476002BCC8457004E94C0 /* HotProspectsApp.swift */,
 				B0C476022BCC8457004E94C0 /* ContentView.swift */,
+				B0C476212BD22331004E94C0 /* ProspectsView.swift */,
+				B0C476232BD2234A004E94C0 /* MeView.swift */,
+				B0C476252BD2262D004E94C0 /* Prospect.swift */,
 				B0C476042BCC8459004E94C0 /* Assets.xcassets */,
 				B0C476062BCC8459004E94C0 /* Preview Content */,
 				B0C4760E2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift */,
@@ -169,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C476242BD2234A004E94C0 /* MeView.swift in Sources */,
 				B0C476152BCE37F0004E94C0 /* ControllingImageInterpolation.swift in Sources */,
 				B0C476112BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift in Sources */,
 				B0C476192BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift in Sources */,
@@ -178,6 +188,8 @@
 				B0C4761B2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift in Sources */,
 				B0C476032BCC8457004E94C0 /* ContentView.swift in Sources */,
 				B0C476012BCC8457004E94C0 /* HotProspectsApp.swift in Sources */,
+				B0C476262BD2262D004E94C0 /* Prospect.swift in Sources */,
+				B0C476222BD22331004E94C0 /* ProspectsView.swift in Sources */,
 				B0C4760F2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
