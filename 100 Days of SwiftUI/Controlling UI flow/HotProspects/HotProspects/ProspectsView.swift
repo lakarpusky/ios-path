@@ -49,35 +49,7 @@ struct ProspectsView: View {
     var body: some View {
         NavigationStack {                
             List(prospects, selection: $selectedProspects) { prospect in
-                VStack(alignment: .leading) {
-                    Text(prospect.name)
-                        .font(.headline)
-                    Text(prospect.emailAddress)
-                        .foregroundStyle(.secondary)
-                }
-                .swipeActions {
-                    Button("Delete", systemImage: "trash", role: .destructive) {
-                        modelContext.delete(prospect)
-                    }
-                    
-                    Button("Remaind Me", systemImage: "bell") {
-                        addNotification(for: prospect)
-                    }
-                    .tint(.orange)
-                    
-                    if prospect.isContacted {
-                        Button("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark") {
-                            prospect.isContacted.toggle()
-                        }
-                        .tint(.blue)
-                    } else {
-                        Button("Mark Contacted", systemImage: "person.crop.circle.fill.badge.checkmark") {
-                            prospect.isContacted.toggle()
-                        }
-                        .tint(.green)
-                    }
-                }
-                .tag(prospect) // help Swift UI understand each row corresponds to a single prospect
+                ProspectItemView(prospect: prospect)
             }
             .navigationTitle(title)
             .toolbar {
@@ -142,53 +114,7 @@ struct ProspectsView: View {
         }
     }
     
-    func addNotification(for prospect: Prospect) {
-        let center = UNUserNotificationCenter.current()
-        
-        let addRequest = {
-            let content = UNMutableNotificationContent()
-            
-            content.title = "Contact \(prospect.name)"
-            content.subtitle = prospect.emailAddress
-            content.sound = UNNotificationSound.default
-            
-            var dateComponents = DateComponents()
-            dateComponents.hour = 9 // .. it will trigger the next time (9am) comes about
-            
-            // .. for testing purposes:
-            // .. shows the alert five seconds from now.
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-            
-            //let trigger = UNCalendarNotificationTrigger(
-                //dateMatching: dateComponents,
-                //repeats: false
-            //)
-            
-            let request = UNNotificationRequest(
-                identifier: UUID().uuidString,
-                content: content,
-                trigger: trigger
-            )
-            
-            center.add(request)
-        }
-        
-        // .. to make sure we only schedule notifications when allowed, will use the (addRequest) closure
-        // .. same code can be used if we have permission already of if we ask and have been granted permission.
-        center.getNotificationSettings { settings in
-            if settings.authorizationStatus == .authorized {
-                addRequest()
-            } else {
-                center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                    if success {
-                        addRequest()
-                    } else if let error {
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-        }
-    }
+    
 }
 
 #Preview {

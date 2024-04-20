@@ -13,6 +13,10 @@ class Prospect {
     var emailAddress: String
     var isContacted: Bool
     
+    var icon: String {
+        self.isContacted ? "person.crop.circle.fill.badge.checkmark" : "person.crop.circle.badge.xmark"
+    }
+    
     init(name: String, emailAddress: String, isContacted: Bool) {
         self.name = name
         self.emailAddress = emailAddress

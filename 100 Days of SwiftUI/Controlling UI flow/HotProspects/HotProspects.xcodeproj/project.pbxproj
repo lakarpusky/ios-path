@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01644D02BD471FC00706B01 /* EditProspectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644CF2BD471FC00706B01 /* EditProspectView.swift */; };
+		B01644D42BD479FA00706B01 /* ProspectItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644D32BD479FA00706B01 /* ProspectItemView.swift */; };
 		B0C476012BCC8457004E94C0 /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476002BCC8457004E94C0 /* HotProspectsApp.swift */; };
 		B0C476032BCC8457004E94C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C476022BCC8457004E94C0 /* ContentView.swift */; };
 		B0C476052BCC8459004E94C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C476042BCC8459004E94C0 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B01644CF2BD471FC00706B01 /* EditProspectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProspectView.swift; sourceTree = "<group>"; };
+		B01644D32BD479FA00706B01 /* ProspectItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectItemView.swift; sourceTree = "<group>"; };
 		B0C475FD2BCC8457004E94C0 /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C476002BCC8457004E94C0 /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		B0C476022BCC8457004E94C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				B0C476022BCC8457004E94C0 /* ContentView.swift */,
 				B0C476212BD22331004E94C0 /* ProspectsView.swift */,
 				B0C476232BD2234A004E94C0 /* MeView.swift */,
+				B01644CF2BD471FC00706B01 /* EditProspectView.swift */,
+				B01644D32BD479FA00706B01 /* ProspectItemView.swift */,
 				B0C476252BD2262D004E94C0 /* Prospect.swift */,
 				B0C476042BCC8459004E94C0 /* Assets.xcassets */,
 				B0C476062BCC8459004E94C0 /* Preview Content */,
@@ -186,12 +192,14 @@
 				B0C476152BCE37F0004E94C0 /* ControllingImageInterpolation.swift in Sources */,
 				B0C476112BCC88EB004E94C0 /* CreatingTabsWithTabViewAndTabItem.swift in Sources */,
 				B0C476192BCF94B5004E94C0 /* ListCustomRowSwipeActions.swift in Sources */,
+				B01644D02BD471FC00706B01 /* EditProspectView.swift in Sources */,
 				B0C476132BCE2AEE004E94C0 /* UnderstandingResultType.swift in Sources */,
 				B0C4761D2BCFA4B9004E94C0 /* AddingSwiftPackageDependencies.swift in Sources */,
 				B0C476172BCE3BA5004E94C0 /* CreatingContextMenus.swift in Sources */,
 				B0C4761B2BCF9A27004E94C0 /* SchedulingLocalNotifications.swift in Sources */,
 				B0C476032BCC8457004E94C0 /* ContentView.swift in Sources */,
 				B0C476012BCC8457004E94C0 /* HotProspectsApp.swift in Sources */,
+				B01644D42BD479FA00706B01 /* ProspectItemView.swift in Sources */,
 				B0C476262BD2262D004E94C0 /* Prospect.swift in Sources */,
 				B0C476222BD22331004E94C0 /* ProspectsView.swift in Sources */,
 				B0C4760F2BCC84DF004E94C0 /* LettingUsersSelectItemsList.swift in Sources */,
