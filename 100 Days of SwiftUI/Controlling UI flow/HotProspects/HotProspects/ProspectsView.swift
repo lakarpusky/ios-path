@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import CodeScanner
+import UserNotifications
 
 enum FilterType {
     case none, contacted, uncontacted
@@ -59,6 +60,11 @@ struct ProspectsView: View {
                         modelContext.delete(prospect)
                     }
                     
+                    Button("Remaind Me", systemImage: "bell") {
+                        addNotification(for: prospect)
+                    }
+                    .tint(.orange)
+                    
                     if prospect.isContacted {
                         Button("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark") {
                             prospect.isContacted.toggle()
@@ -98,7 +104,7 @@ struct ProspectsView: View {
                 // .. this replacement UI will automatically send back whatever we pass in as simulated data
                 CodeScannerView(
                     codeTypes: [.qr], // .. an array of the types of codes we want to scan
-                    simulatedData: "Gabo Montero\nlakarpusky@gmail.com", // .. a string to use as simulated data
+                    simulatedData: "Gabo.montero\ngabo.montero89@gmail.com", // .. a string to use as simulated data
                     completion: handleScan // a completion function to use
                 )
             }
@@ -133,6 +139,54 @@ struct ProspectsView: View {
             modelContext.insert(person)
         case .failure(let error):
             print("Scanning failed: \(error.localizedDescription)")
+        }
+    }
+    
+    func addNotification(for prospect: Prospect) {
+        let center = UNUserNotificationCenter.current()
+        
+        let addRequest = {
+            let content = UNMutableNotificationContent()
+            
+            content.title = "Contact \(prospect.name)"
+            content.subtitle = prospect.emailAddress
+            content.sound = UNNotificationSound.default
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = 9 // .. it will trigger the next time (9am) comes about
+            
+            // .. for testing purposes:
+            // .. shows the alert five seconds from now.
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            
+            //let trigger = UNCalendarNotificationTrigger(
+                //dateMatching: dateComponents,
+                //repeats: false
+            //)
+            
+            let request = UNNotificationRequest(
+                identifier: UUID().uuidString,
+                content: content,
+                trigger: trigger
+            )
+            
+            center.add(request)
+        }
+        
+        // .. to make sure we only schedule notifications when allowed, will use the (addRequest) closure
+        // .. same code can be used if we have permission already of if we ask and have been granted permission.
+        center.getNotificationSettings { settings in
+            if settings.authorizationStatus == .authorized {
+                addRequest()
+            } else {
+                center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        addRequest()
+                    } else if let error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
         }
     }
 }

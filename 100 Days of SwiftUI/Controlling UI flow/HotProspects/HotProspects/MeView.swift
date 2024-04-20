@@ -12,6 +12,10 @@ struct MeView: View {
     @AppStorage("name") private var name = "Anonymous"
     @AppStorage("emailAddress") private var emailAddress = "lakarpusky@gmail.com"
     
+    // .. we could save a little work by caching the generated QR code,
+    // .. we wouldn't have to pass in the name and email address each time.
+    @State private var qrCode = UIImage()
+    
     let context = CIContext() // active (Core Image) context
     let filter = CIFilter.qrCodeGenerator() // instance of (Core Image) QR code generator filter
     
@@ -25,16 +29,39 @@ struct MeView: View {
                 
                 TextField("Email address", text: $emailAddress)
                     .textContentType(.emailAddress)
+                    .textInputAutocapitalization(.never)
                     .font(.title)
                 
-                Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
+                Image(uiImage: qrCode)
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
+                    .contextMenu {
+                        /**
+                         * 1. Open your target settings, and select the `Info` tab
+                         * 2. Right click choose `Add Row`
+                         * 3. Select `Privacy - Photo Library Additions Usage Description` for the key name
+                         * 4. Enter `We want to save your QR code.` as the value
+                         */
+                        ShareLink(
+                            // .. we need to convert the (UIImage) of our QR code to a (SwiftUI Image)
+                            item: Image(uiImage: qrCode),
+                            preview: SharePreview("My QR Code", image: Image(uiImage: qrCode))
+                        )
+                    }
             }
             .navigationTitle("Your code")
+            // .. to make sure is updated when the view is first shown,
+            // .. and also when either the (name) or (email address) changes.
+            .onAppear(perform: updateCode)
+            .onChange(of: name, updateCode)
+            .onChange(of: emailAddress, updateCode)
         }
+    }
+    
+    func updateCode() {
+        qrCode = generateQRCode(from: "\(name)\n\(emailAddress)")
     }
     
     func generateQRCode(from string: String) -> UIImage {
