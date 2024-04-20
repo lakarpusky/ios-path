@@ -11,11 +11,11 @@ import SwiftData
 class Prospect {
     var name: String
     var emailAddress: String
-    var isConnected: Bool
+    var isContacted: Bool
     
-    init(name: String, emailAddress: String, isConnected: Bool) {
+    init(name: String, emailAddress: String, isContacted: Bool) {
         self.name = name
         self.emailAddress = emailAddress
-        self.isConnected = isConnected
+        self.isContacted = isContacted
     }
 }
