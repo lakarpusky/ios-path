@@ -13,6 +13,9 @@
 		B01644E92BD4AE9300706B01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01644E82BD4AE9300706B01 /* Preview Assets.xcassets */; };
 		B01644F02BD4AEF700706B01 /* HowUseGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644EF2BD4AEF700706B01 /* HowUseGestures.swift */; };
 		B01644F22BD4BC4600706B01 /* DisablingUserInteractivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644F12BD4BC4600706B01 /* DisablingUserInteractivity.swift */; };
+		B01644F42BD549E700706B01 /* TriggeringEventsRepeatdlyWithTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644F32BD549E700706B01 /* TriggeringEventsRepeatdlyWithTimer.swift */; };
+		B01644F62BD54E9B00706B01 /* HowNotifiedInBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644F52BD54E9B00706B01 /* HowNotifiedInBackground.swift */; };
+		B01644F82BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644F72BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		B01644E82BD4AE9300706B01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B01644EF2BD4AEF700706B01 /* HowUseGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowUseGestures.swift; sourceTree = "<group>"; };
 		B01644F12BD4BC4600706B01 /* DisablingUserInteractivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisablingUserInteractivity.swift; sourceTree = "<group>"; };
+		B01644F32BD549E700706B01 /* TriggeringEventsRepeatdlyWithTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggeringEventsRepeatdlyWithTimer.swift; sourceTree = "<group>"; };
+		B01644F52BD54E9B00706B01 /* HowNotifiedInBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowNotifiedInBackground.swift; sourceTree = "<group>"; };
+		B01644F72BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportingSpecificAccessibilityNeeds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				B01644E72BD4AE9300706B01 /* Preview Content */,
 				B01644EF2BD4AEF700706B01 /* HowUseGestures.swift */,
 				B01644F12BD4BC4600706B01 /* DisablingUserInteractivity.swift */,
+				B01644F32BD549E700706B01 /* TriggeringEventsRepeatdlyWithTimer.swift */,
+				B01644F52BD54E9B00706B01 /* HowNotifiedInBackground.swift */,
+				B01644F72BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift */,
 			);
 			path = Flashzilla;
 			sourceTree = "<group>";
@@ -145,6 +154,9 @@
 			files = (
 				B01644F22BD4BC4600706B01 /* DisablingUserInteractivity.swift in Sources */,
 				B01644F02BD4AEF700706B01 /* HowUseGestures.swift in Sources */,
+				B01644F42BD549E700706B01 /* TriggeringEventsRepeatdlyWithTimer.swift in Sources */,
+				B01644F62BD54E9B00706B01 /* HowNotifiedInBackground.swift in Sources */,
+				B01644F82BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift in Sources */,
 				B01644E42BD4AE9200706B01 /* ContentView.swift in Sources */,
 				B01644E22BD4AE9200706B01 /* FlashzillaApp.swift in Sources */,
 			);
