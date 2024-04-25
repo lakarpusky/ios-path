@@ -7,15 +7,47 @@
 
 import SwiftUI
 
+extension View {
+    // .. to create an attractive card stack where each
+    // .. card is a little further down the screen that the ones before it.
+    func stacked(
+        at position: Int, // .. takes a position in an array along with
+        in total: Int // .. the total size of the array, and
+    ) -> some View {
+        // .. offsets a view by some amount based on those values
+        let offset = Double(total - position)
+        // .. push views down by 10 points for each place they are in the array
+        return self.offset(y: offset * 10)
+    }
+}
+
 struct ContentView: View {
+    // .. to add a stack of 10 cards
+    @State private var cards = Array<Card>(repeating: .example, count: 10)
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Image(.background)
+                .resizable()
+                .ignoresSafeArea()
+            
+            VStack {
+                ZStack {
+                    ForEach(0..<cards.count, id: \.self) { index in
+                        CardView(card: cards[index]) {
+                            withAnimation {
+                                removeCard(at: index)
+                            }
+                        }
+                        .stacked(at: index, in: cards.count)
+                    }
+                }
+            }
         }
-        .padding()
+    }
+    
+    func removeCard(at index: Int) {
+        cards.remove(at: index)
     }
 }
 
