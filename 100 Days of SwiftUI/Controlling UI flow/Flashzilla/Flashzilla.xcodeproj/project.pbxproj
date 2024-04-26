@@ -18,6 +18,7 @@
 		B01644F82BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01644F72BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift */; };
 		B01D94292BD9D10700C5509F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01D94282BD9D10700C5509F /* Card.swift */; };
 		B01D942B2BD9D29C00C5509F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01D942A2BD9D29C00C5509F /* CardView.swift */; };
+		B0E0BE252BDB7F9400D2D159 /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE242BDB7F9400D2D159 /* EditCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B01644F72BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportingSpecificAccessibilityNeeds.swift; sourceTree = "<group>"; };
 		B01D94282BD9D10700C5509F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B01D942A2BD9D29C00C5509F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B0E0BE242BDB7F9400D2D159 /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				B01644E12BD4AE9200706B01 /* FlashzillaApp.swift */,
 				B01644E32BD4AE9200706B01 /* ContentView.swift */,
 				B01D942A2BD9D29C00C5509F /* CardView.swift */,
+				B0E0BE242BDB7F9400D2D159 /* EditCards.swift */,
 				B01D94282BD9D10700C5509F /* Card.swift */,
 				B01644E52BD4AE9300706B01 /* Assets.xcassets */,
 				B01644E72BD4AE9300706B01 /* Preview Content */,
@@ -161,6 +164,7 @@
 				B01644F22BD4BC4600706B01 /* DisablingUserInteractivity.swift in Sources */,
 				B01D942B2BD9D29C00C5509F /* CardView.swift in Sources */,
 				B01644F02BD4AEF700706B01 /* HowUseGestures.swift in Sources */,
+				B0E0BE252BDB7F9400D2D159 /* EditCards.swift in Sources */,
 				B01644F42BD549E700706B01 /* TriggeringEventsRepeatdlyWithTimer.swift in Sources */,
 				B01644F62BD54E9B00706B01 /* HowNotifiedInBackground.swift in Sources */,
 				B01644F82BD5511900706B01 /* SupportingSpecificAccessibilityNeeds.swift in Sources */,

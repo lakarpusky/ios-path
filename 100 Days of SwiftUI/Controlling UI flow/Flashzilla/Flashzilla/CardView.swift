@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CardView: View {
     // .. to track whether we should be using color for this purpose or not
-    @Environment(\.accessibilityDifferentiateWithoutColor)
-    var accessibilityDifferentiateWithoutColor
+    @Environment(\.accessibilityDifferentiateWithoutColor) var accessibilityDifferentiateWithoutColor
+    @Environment(\.accessibilityVoiceOverEnabled) var accessibilityVoiceOverEnabled
     
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero // .. to track how far the user has dragged
@@ -36,13 +36,20 @@ struct CardView: View {
                 .shadow(radius: 10)
             
             VStack {
-                Text(card.prompt)
-                    .font(.largeTitle)
-                
-                if isShowingAnswer {
-                    Text(card.answer)
-                        .font(.title)
-                        .foregroundStyle(.secondary)
+                if accessibilityVoiceOverEnabled {
+                    Text(isShowingAnswer ? card.answer : card.prompt)
+                        .font(.largeTitle)
+                        .foregroundStyle(.black)
+                } else {
+                    Text(card.prompt)
+                        .font(.largeTitle)
+                        .foregroundStyle(.black)
+                    
+                    if isShowingAnswer {
+                        Text(card.answer)
+                            .font(.title)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
             .padding(20)
@@ -70,6 +77,8 @@ struct CardView: View {
          * we then use this result to substract from `2`: intentional, because it allows the card to stay opaque while being dragged just a little
          */
         .opacity(2 - Double(abs(offset.width / 50)))
+        // .. to make it clear that our cards are tappable buttons
+        .accessibilityAddTraits(.isButton)
         .gesture(
             DragGesture()
                 .onChanged { gesture in
@@ -89,6 +98,7 @@ struct CardView: View {
         .onTapGesture {
             isShowingAnswer.toggle()
         }
+        .animation(.bouncy, value: offset)
     }
 }
 
