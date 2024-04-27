@@ -72,6 +72,7 @@ struct ContentView: View {
                         .background(.white)
                         .foregroundStyle(.black)
                         .clipShape(.capsule)
+                        .offset(y: 24)
                 }
             }
             
