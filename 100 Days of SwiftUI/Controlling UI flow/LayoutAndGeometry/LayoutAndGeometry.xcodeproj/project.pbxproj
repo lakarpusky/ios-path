@@ -15,6 +15,10 @@
 		B0E0BE432BDD708E00D2D159 /* AlignmentGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE422BDD708E00D2D159 /* AlignmentGuides.swift */; };
 		B0E0BE452BDD798400D2D159 /* CustomAlignmentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE442BDD798400D2D159 /* CustomAlignmentGuide.swift */; };
 		B0E0BE472BDD80EE00D2D159 /* AbsolutePositioningViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE462BDD80EE00D2D159 /* AbsolutePositioningViews.swift */; };
+		B0E0BE4D2BDDABA900D2D159 /* GeometryReaderFramesAndCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE4C2BDDABA900D2D159 /* GeometryReaderFramesAndCoordinates.swift */; };
+		B0E0BE4F2BDDABC200D2D159 /* GeometryReaderResizingImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE4E2BDDABC200D2D159 /* GeometryReaderResizingImages.swift */; };
+		B0E0BE512BDDB70A00D2D159 /* GeometryReaderScrollViewEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE502BDDB70A00D2D159 /* GeometryReaderScrollViewEffects.swift */; };
+		B0E0BE532BDDBC2800D2D159 /* ScrollViewEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BE522BDDBC2800D2D159 /* ScrollViewEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		B0E0BE422BDD708E00D2D159 /* AlignmentGuides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentGuides.swift; sourceTree = "<group>"; };
 		B0E0BE442BDD798400D2D159 /* CustomAlignmentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlignmentGuide.swift; sourceTree = "<group>"; };
 		B0E0BE462BDD80EE00D2D159 /* AbsolutePositioningViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsolutePositioningViews.swift; sourceTree = "<group>"; };
+		B0E0BE4C2BDDABA900D2D159 /* GeometryReaderFramesAndCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderFramesAndCoordinates.swift; sourceTree = "<group>"; };
+		B0E0BE4E2BDDABC200D2D159 /* GeometryReaderResizingImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderResizingImages.swift; sourceTree = "<group>"; };
+		B0E0BE502BDDB70A00D2D159 /* GeometryReaderScrollViewEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderScrollViewEffects.swift; sourceTree = "<group>"; };
+		B0E0BE522BDDBC2800D2D159 /* ScrollViewEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,10 @@
 				B0E0BE422BDD708E00D2D159 /* AlignmentGuides.swift */,
 				B0E0BE442BDD798400D2D159 /* CustomAlignmentGuide.swift */,
 				B0E0BE462BDD80EE00D2D159 /* AbsolutePositioningViews.swift */,
+				B0E0BE4E2BDDABC200D2D159 /* GeometryReaderResizingImages.swift */,
+				B0E0BE4C2BDDABA900D2D159 /* GeometryReaderFramesAndCoordinates.swift */,
+				B0E0BE502BDDB70A00D2D159 /* GeometryReaderScrollViewEffects.swift */,
+				B0E0BE522BDDBC2800D2D159 /* ScrollViewEffects.swift */,
 			);
 			path = LayoutAndGeometry;
 			sourceTree = "<group>";
@@ -149,11 +161,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E0BE4F2BDDABC200D2D159 /* GeometryReaderResizingImages.swift in Sources */,
 				B0E0BE452BDD798400D2D159 /* CustomAlignmentGuide.swift in Sources */,
 				B0E0BE432BDD708E00D2D159 /* AlignmentGuides.swift in Sources */,
+				B0E0BE512BDDB70A00D2D159 /* GeometryReaderScrollViewEffects.swift in Sources */,
 				B0E0BE352BDCBAB000D2D159 /* ContentView.swift in Sources */,
 				B0E0BE332BDCBAB000D2D159 /* LayoutAndGeometryApp.swift in Sources */,
+				B0E0BE532BDDBC2800D2D159 /* ScrollViewEffects.swift in Sources */,
 				B0E0BE412BDD666800D2D159 /* HowLayoutWorks.swift in Sources */,
+				B0E0BE4D2BDDABA900D2D159 /* GeometryReaderFramesAndCoordinates.swift in Sources */,
 				B0E0BE472BDD80EE00D2D159 /* AbsolutePositioningViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
