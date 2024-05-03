@@ -20,6 +20,10 @@ struct Resort: Codable, Hashable, Identifiable {
     var runs: Int
     var facilities: [String]
     
+    var facilityTypes: [Facility] {
+        facilities.map(Facility.init)
+    }
+    
     // "static let": automatically makes them lazy - they don't get created until they are used.
     static let allResorts: [Resort] = Bundle.main.decode("resorts.json")
     static let example = allResorts[0]
