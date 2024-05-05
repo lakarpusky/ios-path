@@ -59,7 +59,7 @@
     - Core data
     - ✅ Swift data
     - Serialize
-    	- JSON
+    	- ✅ JSON
     	- PList
     - Cloud
     	- iCloud
@@ -71,7 +71,7 @@
     - Scheme
     - Target
     - Package manager
-	    - Swift package manager
+	    - ✅ Swift package manager
 	    - CocoaPods **
 
 5. **Instruments**
