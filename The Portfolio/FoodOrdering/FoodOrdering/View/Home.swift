@@ -39,23 +39,46 @@ struct Home: View {
                 Divider()
                 
                 HStack(spacing: 15) {
-                    TextField("Search", text: $HomeModel.search)
+                    Image(systemName: "magnifyingglass")
+                        .font(.title2)
+                        .foregroundStyle(.gray)
                     
-                    if HomeModel.search != "" {
-                        Button(action: {}) {
-                            Image(systemName: "magnifyingglass")
-                                .font(.title2)
-                                .foregroundStyle(.gray)
-                        }
-                        .animation(.easeIn, value: HomeModel.search)
-                    }
+                    TextField("Search", text: $HomeModel.search)
                 }
                 .padding(.horizontal)
                 .padding(.top, 10)
                 
                 Divider()
                 
-                Spacer()
+                ScrollView(showsIndicators: false) {
+                    ForEach(HomeModel.filtered) { item in
+                        // .. Item view
+                        ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                            ItemView(item: item)
+                            
+                            HStack {
+                                Text("FREE DELIVERY")
+                                    .foregroundStyle(.white)
+                                    .padding(.vertical, 10)
+                                    .padding(.horizontal)
+                                    .background(.pink)
+                                
+                                Spacer(minLength: 0)
+                                
+                                Button(action: {}) {
+                                    Image(systemName: "plus")
+                                        .foregroundStyle(.white)
+                                        .padding(20)
+                                        .background(.pink)
+                                        .clipShape(Circle())
+                                }
+                            }
+                            .padding(.trailing, 10)
+                            .padding(.top, 10)
+                        }
+                        .frame(width: UIScreen.main.bounds.width - 30)
+                    }
+                }
             }
             
             // .. side menu
@@ -90,7 +113,22 @@ struct Home: View {
         .onAppear(perform: {
             // .. calling location delegate
             HomeModel.locationManager.delegate = HomeModel
+        })
+        .onChange(of: HomeModel.search, perform: { value in
+            // .. to avoid continue search requests
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                if value == HomeModel.search && HomeModel.search != "" {
+                    // .. search data
+                    HomeModel.filterData()
+                }
+            }
             
+            if HomeModel.search == "" {
+                // .. reset all data
+                withAnimation(.linear) {
+                    HomeModel.filtered = HomeModel.items
+                }
+            }
         })
     }
 }

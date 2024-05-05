@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct Item: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    Item()
+struct Item: Identifiable {
+    var id: String
+    var item_name: String
+    var item_cost: NSNumber
+    var item_details: String
+    var item_image: String
+    var item_ratings: String
 }
