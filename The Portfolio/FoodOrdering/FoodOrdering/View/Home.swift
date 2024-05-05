@@ -50,33 +50,41 @@ struct Home: View {
                 
                 Divider()
                 
-                ScrollView(showsIndicators: false) {
-                    ForEach(HomeModel.filtered) { item in
-                        // .. Item view
-                        ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
-                            ItemView(item: item)
-                            
-                            HStack {
-                                Text("FREE DELIVERY")
-                                    .foregroundStyle(.white)
-                                    .padding(.vertical, 10)
-                                    .padding(.horizontal)
-                                    .background(.pink)
+                if HomeModel.items.isEmpty {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                } else {
+                    ScrollView(showsIndicators: false) {
+                        ForEach(HomeModel.filtered) { item in
+                            // .. Item view
+                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                                ItemView(item: item)
                                 
-                                Spacer(minLength: 0)
-                                
-                                Button(action: {}) {
-                                    Image(systemName: "plus")
+                                HStack {
+                                    Text("FREE DELIVERY")
                                         .foregroundStyle(.white)
-                                        .padding(20)
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal)
                                         .background(.pink)
-                                        .clipShape(Circle())
+                                    
+                                    Spacer(minLength: 0)
+                                    
+                                    Button(action: {
+                                        HomeModel.addToCart(item: item)
+                                    }) {
+                                        Image(systemName: item.isAdded ? "checkmark" : "plus")
+                                            .foregroundStyle(.white)
+                                            .padding(20)
+                                            .background(item.isAdded ? .green : .pink)
+                                            .clipShape(Circle())
+                                    }
                                 }
+                                .padding(.trailing, 10)
+                                .padding(.top, 10)
                             }
-                            .padding(.trailing, 10)
-                            .padding(.top, 10)
+                            .frame(width: UIScreen.main.bounds.width - 30)
                         }
-                        .frame(width: UIScreen.main.bounds.width - 30)
                     }
                 }
             }
