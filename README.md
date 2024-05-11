@@ -50,8 +50,8 @@
 
 2. **System Framework**
 
-    - Swift standard
-    - Swift foundation
+    - ✅ Swift standard
+    - ✅ Swift foundation
     - Cocoa touch (UIKit)
 
 3. **Data Persistence**
@@ -63,7 +63,7 @@
     	- PList
     - Cloud
     	- iCloud
-    	- Firebase
+    	- ✅ Firebase
 
 4. **Project & Workspace**
 
@@ -72,7 +72,7 @@
     - Target
     - Package manager
 	    - ✅ Swift package manager
-	    - CocoaPods **
+	    - ✅ CocoaPods **
 
 5. **Instruments**
 
