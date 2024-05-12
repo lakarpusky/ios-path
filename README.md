@@ -127,3 +127,4 @@
 - Sean Allen ₋ https://www.youtube.com/@seanallen
 - FreeCodeCamp ₋ https://www.youtube.com/@freecodecamp
 - Paul Hudson ₋ https://www.youtube.com/@twostraws
+- Apple Developers - https://www.youtube.com/@AppleDeveloper
