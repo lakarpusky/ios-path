@@ -46,7 +46,7 @@
     - Advanced design pattern **
       	- Viper
         	- RxSwift
-        - Mvvm
+        - ✅ Mvvm
 
 2. **System Framework**
 
