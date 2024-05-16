@@ -8,36 +8,41 @@
 import SwiftUI
 
 struct FrameworkDetailView: View {
-    @State private var isShowingSafariView = false
-    
-    let framework: Framework
+    @ObservedObject  var viewModel: FrameworkDetailViewModel
     
     var body: some View {
         VStack {
-            FrameworkTitleView(framework: framework)
+            XDismissButton(isShowingDetailView: $viewModel.isShowingDetailView.wrappedValue)
+            Spacer()
             
-            Text(framework.description)
+            FrameworkTitleView(framework: viewModel.framework)
+            Text(viewModel.framework.description)
                 .font(.body)
                 .padding()
             
             Spacer()
             
-            Button {
-                isShowingSafariView = true
-            } label: {
-                //AFButton(title: "Learn More")
-                Label("Learn More", systemImage: "book.fill")
+            Link(destination: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com")!) {
+                AFButton(title: "Learn More")
             }
-            .buttonStyle(.bordered)
-            .controlSize(.large)
-            .tint(.red)
+            
+//            Button {
+//                viewModel.isShowingSafariView = true
+//            } label: {
+//                AFButton(title: "Learn More")
+//            }
         }
-        .fullScreenCover(isPresented: $isShowingSafariView) {
-            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!) // .. 🔥 "!" force unwrap
-        }
+//        .fullScreenCover(isPresented: $viewModel.isShowingSafariView) {
+//            SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com")!) // .. 🔥 "!" force unwrap
+//        }
     }
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework)
+    FrameworkDetailView(
+        viewModel: FrameworkDetailViewModel(
+            framework: MockData.sampleFramework,
+            isShowingDetailView: .constant(false)
+        )
+    )
 }

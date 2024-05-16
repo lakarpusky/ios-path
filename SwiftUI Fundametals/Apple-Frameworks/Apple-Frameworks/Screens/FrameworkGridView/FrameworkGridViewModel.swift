@@ -15,11 +15,11 @@ final class FrameworkGridViewModel: ObservableObject {
         GridItem(.flexible())
     ]
     
-//    var selectedFramework: Framework? {
-//        didSet { // .. anytime the value changed
-//            isShowingDetailView = true
-//        }
-//    }
-//    
-//    @Published var isShowingDetailView = false
+    var selectedFramework: Framework? {
+        didSet {
+            isShowingDetailView = true
+        }
+    }
+    
+    @Published var isShowingDetailView = false
 }
